@@ -6,13 +6,6 @@ body {
    
  }
 
-/*
- #principal{
-   width: 70%;
-   text-align: center;
-    
- }
-*/
  
 /*Imagen de fondo*/
 #bg {  position: fixed;  
@@ -117,7 +110,7 @@ body {
 }
 
 
-/*Por debajo de los 700 piceles */
+/*Por debajo de los 700 pixeles */
 @media screen and (max-width: 700px){
   #Tit1 {
       font-size: 18pt;
@@ -127,7 +120,7 @@ body {
   }
 }
 
-/*Por debajo de los 400 piceles */
+/*Por debajo de los 400 pixeles */
 @media screen and (max-width: 400px){
   #Tit1 {
       font-size: 14pt;
