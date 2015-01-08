@@ -19,6 +19,10 @@ body {
        -o-background-size: cover;
 }
 
+#ctr_gen{
+  text-align: center;
+  margin-left: 16%;
+}
 
 /*Cabecera*/
 #cabecera{
@@ -39,7 +43,7 @@ body {
 }
 
 #Tit2{
-  font-size: 17pt;
+  font-size: 18pt;
 }
 
 #logo{
@@ -73,18 +77,27 @@ body {
    font-weight: bold;
    line-height: 1;
 }
-
+/*validar*/
 #conimg{
   width: 40%;
   height: 40%;   
  }
 
+.imagenes {
+  width: 40%;
+  height: 40%;   
+}
+/*validar*/
 #btn_ing{
    background:#99CCFF;
    border-radius: 15px;
    margin: 7px 0;
 }
-
+.boton{
+   background:#99CCFF;
+   border-radius: 15px;
+   margin: 7px 0;
+}
 #lateral{
    float:left;
    width: 30%;
@@ -94,6 +107,10 @@ body {
 }
 
 #usuario{
+     width: 75%;
+     border-radius: 15px;
+}
+#password{
      width: 75%;
      border-radius: 15px;
 }

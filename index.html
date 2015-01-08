@@ -22,7 +22,7 @@
 
  <body >
    
-   <img id="bg" src="images/fondo_2.png"  />  
+   <img id="bg" src="images/fondo_2.png" alt="" />  
    
 
 <!--Menu-->
@@ -48,7 +48,7 @@
             <li class="dropdown">
 
              <a class="dropdown-toggle" data-toggle="dropdown">
-                Ambientes
+                Modulos
              <b class="caret"></b></a>
    
              <ul class="dropdown-menu">
@@ -66,7 +66,7 @@
       <!-- </div> -->
       
 
-   <center>
+  <div id="ctr_gen">
   <div class="container">
    <div class="starter-template">   
 
@@ -74,17 +74,16 @@
     <!--Cabecera-->
       <div id="cabecera">
        <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="images/logo_espol.gif" />
+        <img id="logo" src="images/logo_espol.gif" alt="" />
         <br>
-        <p id="Tit2">Gana comisiones Referenciando a tus amigos</p>
-        <p id="Tit2">Tenemos lo que tú necesitas</p>
+        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
       </div>
 
       <!--Lateral Izquierdo-->
       <div id="contenido">
         <h2>NOVEDADES</h2>
         <br>
-       <img id="conimg" src="images/prod1.jpg" />
+       <img class="imagenes" src="images/prod1.jpg" alt=""/>
         <br>
         <p><ins>Reloj Bluetooth</ins></p>
         <p>Conéctese a su celular vea Mensajes,</p>
@@ -92,7 +91,7 @@
         <p>Precio: 150.00</p>
         <br>
 
-       <img id="conimg" src="images/prod2.jpg" />
+       <img class="imagenes" src="images/prod2.jpg" alt="" />
         <br>
         <p><ins>Sillas Ergonómicas</ins></p>
         <p>Disfrute de la comodidad con</p>
@@ -108,14 +107,13 @@
           <!--Ingreso sign In-->
           <div id="ingreso">
             <br>
-	    <form method="post" action="">  
+	    <form method="post" action="Ing_sesion">  
                <input type="text" id="usuario" name="user" value="" placeholder="Usuario" required="required" autofocus="autofocus" />  
+                <br><br>
+               <input type="password" id="password" name="psw" placeholder="Password">
                 <br>
-                <br>
-               <input type="password" id="usuario" name="psw" placeholder="Password">
-                <br>
-               <input type="submit" value="Ingresar" id="btn_ing" />
-		<br>
+               <input type="submit" value="Ingresar" class="boton" />
+		           <br>
                <a href="html/registro_usr.html"><ins>Registrate</ins></a>
             </form>            
             <br>
@@ -146,9 +144,9 @@
       <!--Footer-->
       <div id="pie">
          <div>
-            <a href="http://www.facebook.com"><img src="images/facebook.jpg"/></a>            
-            <a href="http://www.twitter.com"><img src="images/twiter.jpg"/></a>            
-            <a href="http://www.google.com"><img src="images/googlemas.jpg"/></a>            
+            <a href="http://www.facebook.com"><img src="images/facebook.jpg" alt=""/></a>            
+            <a href="http://www.twitter.com"><img src="images/twiter.jpg" alt=""/></a>            
+            <a href="http://www.google.com"><img src="images/googlemas.jpg" alt=""/></a>            
          </div>
          <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>
@@ -157,7 +155,7 @@
    </div>
   </div>
 
-  </center>
+</div>
 
  </body>
 
