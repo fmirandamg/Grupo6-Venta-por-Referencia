@@ -27,7 +27,7 @@
 
  <body >
    
-   <img id="bg" src="../images/fondo_2.png"  />  
+   <img id="bg" src="../images/fondo_2.png"  alt=""/>  
    
 
  <!--Menu-->
@@ -67,7 +67,7 @@
       </div>
     </nav>
 
-  <center>
+  <div id="ctr_gen">
   <div class="container">
    <div class="starter-template">   
     <div id="Central">
@@ -75,30 +75,29 @@
     <!--Cabecera-->
       <div id="cabecera">
        <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="../images/logo_espol.gif" />
+        <img id="logo" src="../images/logo_espol.gif" alt=""/>
         <br>
-        <p id="Tit2">Gana comisiones referenciando a tus amigos</p>
-        <p id="Tit2">Tenemos lo que tú necesitas</p>
+        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
       </div>
 
       <!--Pantalla Criterio-->
         <!--Criterio Nombre-->
         <div id="Buscador">
          <h3>Consulta de Articulos y Comisiones</h3>
-         <h4>Criterio de Descripción</h3>
-         <form method="post" action="">
+         <h4>Criterio de Descripción</h4>
+         <form method="post" action="buscar_descrip">
             <select>
               <option value="tod">Todos</option>
               <option value="codigo">Código</option>
               <option value="descrip">Descripción</option>              
             </select>
-            <input type="text" name="buscar" id="bus_rep" />
+            <input type="text" name="buscar" class="buscar" />
          </form> 
 
         </div>
         <!--Rango de Fechas-->
          <div id="rep_fecha">
-           <form method="post" action="">
+           <form method="post" action="Buscar_res">
             <br>
             <label id="labtel1">Fecha Desde</label>
             <label id="labtel2">Fecha Hasta</label>
@@ -106,19 +105,19 @@
             <input type="text" class="tcal" name="fechaD" value="" />
             <input type="text" class="tcal" name="fechaH" value="" />
             <br>
-            <input type="submit" value="Buscar" id="btn_ing">
-            <br><br>
+            <input type="submit" value="Buscar" class="boton">
            </form>
         </div>
+        <br><br><br><br><br>
       <!--Fin Campos de Criterio-->
       <!--Tabla de Resultados-->
-        <div>
-          <table id="tblbuscar" >
+        <div id="repor_cont">
+          <table class="tblbuscar" >
                <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
                   <tr >
-                     <th width=15% >Código</th>
-                     <th width=50%>Descripción</th>
+                     <th class="tbl_cod_rep" >Código</th>
+                     <th class="tbl_nombre_rep">Descripción</th>
                      <th >Cant.Vend.</th>
                      <th >Valor Comisión</th>
                   </tr>
@@ -126,19 +125,19 @@
              </table> 
 
              <div id="d_tabrep">
-              <table id="tblbusdet" >
+              <table class="tblbusdet" >
                <tbody>
                  <tr>
-                   <td width=15%>1</td>
-                   <td width=50%>RELOJ BLUETOOTH</td>
+                   <td class="tbl_cod_rep">1</td>
+                   <td class="tbl_nombre_rep">RELOJ BLUETOOTH</td>
                    <td >10</td>
                    <td >12.50</td>
                  </tr>
                  <tr>
-                   <td >2</td>
-                   <td width=50%>SILLAS ERGONÓMICAS</td>
-                   <td >0</td>
-                   <td >0.00</td>
+                   <td>2</td>
+                   <td>SILLAS ERGONÓMICAS</td>
+                   <td>0</td>
+                   <td>0.00</td>
                  </tr>  
                  
                </tbody>
@@ -150,9 +149,9 @@
       <!--Footer-->
       <div id="pie">
          <div>
-            <a href="http://www.facebook.com"><img src="../images/facebook.jpg"/></a>            
-            <a href="http://www.twitter.com"><img src="../images/twiter.jpg"/></a>            
-            <a href="http://www.google.com"><img src="../images/googlemas.jpg"/></a>            
+            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>
+            <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>
+            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>
          </div>
          <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>
@@ -160,7 +159,7 @@
     </div>
    </div>
   </div>
-  </center>
+  </div>
 
  </body>
 

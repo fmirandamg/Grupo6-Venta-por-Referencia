@@ -60,7 +60,7 @@ body {
    border-radius: 15px 15px 15px 15px;
 }
 
-#ingreso{
+.ingreso{
    margin-top: 5px;
    margin-Bottom: 5px;
    border: 1px Solid black;
@@ -98,7 +98,7 @@ body {
    border-radius: 15px;
    margin: 7px 0;
 }
-#lateral{
+.lateral{
    float:left;
    width: 30%;
    -moz-border-radius: 15px 15px 15px 15px;
