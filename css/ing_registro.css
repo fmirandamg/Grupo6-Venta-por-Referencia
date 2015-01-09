@@ -1,0 +1,164 @@
+/*Estilo pantalla registro*/
+
+
+input{
+  height: 24px;
+}
+
+#formulario{
+  text-align: left;
+  width: 50%;
+  /*border:1px solid black;*/
+  line-height: 1;
+  float:left;
+  margin-left:10%;
+}
+/*Css contenedores de busquedas*/
+#Buscador{
+  text-align: left;
+  width: 100%;
+  /*border:1px solid black;*/
+  line-height: 1;
+  /*margin-left:2%;*/
+}
+#Buscador2{
+  text-align: left;
+  width: 65%;
+  /*border:1px solid black;*/
+  line-height: 1;
+  float: left;
+  /*margin-left:2%;*/
+}
+
+#buscar{
+  width: 45%;
+}
+/*Tamaño Cristerio busqueda nombre*/
+#bus_rep{
+  width: 75%;
+}
+/*Estilo de Tablas*/
+#tblbuscar{
+     width: 85%;
+     border-top:1px solid black;
+     border-left: 1px solid black;
+     border-right: 1px solid black;
+     border-collapse:separate;
+     border-bottom:1px solid black;
+     margin-left: 14px;
+     table-layout: fixed;
+}
+#tblbusdet{
+     width: 95%;
+     border-collapse:separate;
+     margin-left: 14px;
+     table-layout: fixed;
+}
+#d_tabla{
+  overflow-y:auto;
+  height: 70px;
+  width: 89%; 
+}
+#d_tabrep{
+  overflow-y:auto;
+  height: 400px;
+  width: 89%; 
+}
+/*
+tbody { 
+           display: block; 
+           height: 50px; 
+           overflow: auto; 
+           width: 100%; }
+
+td {
+  border: 1px solid black;
+}
+#fil_cod{
+  width: 20%;
+}
+#fil_nom{
+ width: 200%; 
+}
+*/
+/*************************/
+/* Css Reportes */
+#rep_fecha{
+   text-align: left;
+   width: 50%;
+  float: left;
+}
+#rep_criterio{
+   border: 1px Solid black;
+   text-align: left;
+   width: 100%;
+   float: left;
+}
+/**********************/
+#imgusr{
+  width: 80%;
+  height: 80%;
+}
+
+#labtel1{
+   float:left;
+}
+#labtel2{
+   margin-left:10%;
+}
+
+input.nomape{
+  width: 65%;
+}
+
+#nombres{
+  width: 75%;
+  text-align: center;
+}
+#dscprod{
+  width: 75%;
+}
+
+input.cod{
+  width: 20%;
+}
+input.ced{
+  width: 30%;
+}
+
+input.fec{
+  width: 20%;
+}
+
+input.telf1{
+  width: 25%;
+  float:left;
+}
+input.telf2{
+  width: 25%;
+  margin-left:3%;
+}
+
+input.usrpwd{
+     width: 35%;
+}
+
+/*Por debajo de los 700 pixeles */
+@media screen and (max-width: 700px){
+  #Tit1 {
+      font-size: 18pt;
+  }
+  #Tit2 {
+      font-size: 12pt;
+  }
+}
+
+/*Por debajo de los 400 pixeles */
+@media screen and (max-width: 400px){
+  #Tit1 {
+      font-size: 14pt;
+  }
+  #Tit2 {
+      font-size: 9pt;
+  }
+}
