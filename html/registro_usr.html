@@ -1,0 +1,152 @@
+<!DOCTYPE HTML>
+
+<html lang = "es">
+ <head>
+   <title>Venta por Referencia - Usuario</title>
+
+   <meta charset="iso-8859-1">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="Grupo 6">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/principal.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="../css/ing_registro.css" type="text/css" media="all" />
+
+    <!-- Script bootstrap -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+ </head>
+
+ <body >
+   
+   <img id="bg" src="../images/fondo_2.png"  />  
+   
+
+ <!--Menu-->
+    <!--<div id="menu">-->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Ventas Por Referencia</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">            
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">Nuestra Empresa</a></li>
+            <li><a href="#">El Negocio</a></li>
+            <li><a href="#">Preguntas Frecuentes</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+      <!-- </div> -->
+      
+
+  <center>
+  <div class="container">
+   <div class="starter-template">   
+    <div id="Central">
+
+    <!--Cabecera-->
+      <div id="cabecera">
+       <p id="Tit1">Ventas por Referencia</p>
+        <img id="logo" src="../images/logo_espol.gif" />
+        <br>
+        <p id="Tit2">Gana comisiones referenciando a tus amigos</p>
+        <p id="Tit2">Tenemos lo que tú necesitas</p>
+      </div>
+
+      <!--Formulario Central-->
+      <div id="formulario">
+        <h3>Registro Usuario</h3>
+        <br>
+
+         <form method="post" action="">
+            <label>Nombres</label>
+            <br>
+            <input type="text" class="nomape" name="nombre" value="" autofocus="autofocus"/>
+            <br>
+            <label>Apellidos</label>
+            <br>
+            <input type="text" class="nomape" name="apellido" value=""/>
+            <br>
+            <label>Cedula</label>
+            <br>
+            <input type="text" class="ced" name="cedula" value=""/>
+            <br>
+            <label>Fecha</label>
+            <br>
+            <input type="date" class="fec" name="fecha" value=""/>
+            <br>
+            <label id="labtel1">Telefono 1</label>
+            <label id="labtel2">Telefono 2</label>
+            <br>
+            <input type="text" class="telf1" name="tel1" value=""/>
+            <input type="text" class="telf2" name="tel2" value=""/>
+            <br>
+            <label>Email</label>
+            <br>
+            <input type="email" class="nomape" name="tel2" value=""/>
+            <br>
+            <label>Usuario</label>
+            <br>
+            <input type="text" class="usrpwd" name="usr" value=""/>
+            <br>
+            <label>Password</label>
+            <br>
+            <input type="password" class="usrpwd" name="psw" value=""/>
+            <br>
+            <input type="submit" value="Grabar" id="btn_ing" />
+            <br><br><br>
+         </form> 
+
+      </div>
+
+      <!--Lateral derecho-->
+      <div id="lateral">
+          <!--Carga Usuario-->
+          <div id="ingreso">
+            <br>
+           <img id="imgusr" src="../images/foto_usuario.jpg"  /> 
+   
+           <form method="post" action="">
+              <br>
+              <input type="submit" value="Cargar Imagen" id="btn_ing" />
+              <br>             
+           </form>
+
+          </div>
+      </div>
+
+     <!--Fin divisón central-->
+      <!--Footer-->
+      <div id="pie">
+         <div>
+            <a href="http://www.facebook.com"><img src="../images/facebook.jpg"/></a>            
+            <a href="http://www.twitter.com"><img src="../images/twiter.jpg"/></a>            
+            <a href="http://www.google.com"><img src="../images/googlemas.jpg"/></a>            
+         </div>
+         <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
+      </div>
+
+    </div>
+   </div>
+  </div>
+
+  </center>
+
+ </body>
+
+</html>
