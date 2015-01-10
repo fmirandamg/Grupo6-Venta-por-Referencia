@@ -27,7 +27,7 @@
 
  <body >
    
-   <img id="bg" src="../images/fondo_2.png"  />  
+   <img id="bg" src="../images/fondo_2.png" alt="" />  
    
 
  <!--Menu-->
@@ -68,7 +68,7 @@
       </div>
     </nav>
 
-  <center>
+  <div id="ctr_gen">
   <div class="container">
    <div class="starter-template">   
     <div id="Central">
@@ -76,44 +76,43 @@
     <!--Cabecera-->
       <div id="cabecera">
        <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="../images/logo_espol.gif" />
+        <img id="logo" src="../images/logo_espol.gif" alt=""/>
         <br>
-        <p id="Tit2">Gana comisiones referenciando a tus amigos</p>
-        <p id="Tit2">Tenemos lo que tú necesitas</p>
+        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
       </div>
 
       <!--Busqueda-->
       <div id="Buscador">
         <h3>Lista de Usuarios</h3>
-        <h4>Buscar</h3>
-         <form method="post" action="">
+        <h4>Buscar</h4>
+         <form method="post" action="bus_dnom">
             <select>
               <option value="Cedula">Cedula</option>
               <option value="Nombres">Nombres</option>
               <option value="Apellidos">Apellidos</option>
             </select>
-            <input type="text" name="buscar" id="buscar" />
-            <input type="submit" value="Buscar" id="btn_ing">
+            <input type="text" name="buscar" class="buscar" />
+            <input type="submit" value="Buscar" class="boton">
          </form> 
 
         
-            <table id="tblbuscar" >
+            <table class="tblbuscar" >
                <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
                   <tr >
-                     <th width=15% >Código</th>
-                     <th width=50% >Nombres</th>
+                     <th class="tbl_cod" >Código</th>
+                     <th class="tbl_nombre" >Nombres</th>
                      <th >Cedula</th>
                   </tr>
                </thead>
              </table> 
 
-             <div id="d_tabla">
-              <table id="tblbusdet" >
+             <div class="d_tabla">
+              <table class="tblbusdet" >
                <tbody>
                  <tr>
-                   <td width=15%><a href="#">1</a></td>
-                   <td width=50%>FRANCISCO RAUL MIRANDA GARCIA</td>
+                   <td class="tbl_cod"><a href="#">1</a></td>
+                   <td class="tbl_nombre">FRANCISCO RAUL MIRANDA GARCIA</td>
                    <td >0918360745</td>
                  </tr>
                  <tr>
@@ -132,7 +131,7 @@
         <h3>Registro / Actualización</h3>
         <br>
 
-          <form method="post" action="">
+          <form method="post" action="graba_usr">
             <label>Código</label>
             <br>
             <input type="text" class="cod" name="codigo" value="" readonly/>
@@ -179,23 +178,23 @@
             <br>
             <input type="password" class="usrpwd" name="psw" value=""/>
             <br><br>
-            <input type="submit" name="nuevo" value="Nuevo" id="btn_ing" />
-            <input type="submit" name="grabar" value="Grabar" id="btn_ing" />
+            <input type="submit" name="nuevo" value="Nuevo" class="boton" />
+            <input type="submit" name="grabar" value="Grabar" class="boton" />
             <br><br>
          </form> 
          <p>Nota: Los usuarios deberán modificar su password al ingresar por primera vez al sitio</p>
          <br>
       </div>
       <!--Imnagen de Referenciado-->
-      <div id="lateral">
+      <div class="lateral">>
           <!--Carga Usuario-->
-          <div id="ingreso">
+          <div class="ingreso">
             <br>
-           <img id="imgusr" src="../images/foto_usuario.jpg"  /> 
+           <img id="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
    
-           <form method="post" action="">
+           <form method="post" action="carg_img">
               <br>
-              <input type="submit" value="Cargar Imagen" id="btn_ing" />
+              <input type="submit" value="Cargar Imagen" class="boton"/>
               <br>             
            </form>
 
@@ -206,9 +205,9 @@
       <!--Footer-->
       <div id="pie">
          <div>
-            <a href="http://www.facebook.com"><img src="../images/facebook.jpg"/></a>            
-            <a href="http://www.twitter.com"><img src="../images/twiter.jpg"/></a>            
-            <a href="http://www.google.com"><img src="../images/googlemas.jpg"/></a>            
+            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>            
+            <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>            
+            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>            
          </div>
          <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>
@@ -217,7 +216,7 @@
    </div>
   </div>
 
-  </center>
+  </div>
 
  </body>
 

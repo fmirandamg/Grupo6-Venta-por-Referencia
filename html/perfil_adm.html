@@ -26,7 +26,7 @@
 
  <body >
    
-   <img id="bg" src="../images/fondo_2.png"  />  
+   <img id="bg" src="../images/fondo_2.png" alt=""/>  
    
 
  <!--Menu-->
@@ -67,7 +67,7 @@
       </div>
     </nav>
 
-  <center>
+  <div id="ctr_gen">
   <div class="container">
    <div class="starter-template">   
     <div id="Central">
@@ -75,10 +75,9 @@
     <!--Cabecera-->
       <div id="cabecera">
        <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="../images/logo_espol.gif" />
+        <img id="logo" src="../images/logo_espol.gif" alt=""/>
         <br>
-        <p id="Tit2">Gana comisiones referenciando a tus amigos</p>
-        <p id="Tit2">Tenemos lo que tú necesitas</p>
+        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
       </div>
 
       <!--Formulario Central-->
@@ -86,7 +85,7 @@
         <h3>Mi Perfil</h3>
         <br>
 
-         <form method="post" action="">
+         <form method="post" action="reg_adm">
             <label>Nombres</label>
             <br>
             <input type="text" class="nomape" name="nombre" value="" autofocus="autofocus"/>
@@ -121,22 +120,22 @@
             <br>
             <input type="password" class="usrpwd" name="psw" value=""/>
             <br><br>
-            <input type="submit" value="Actualizar" id="btn_ing" />
+            <input type="submit" value="Actualizar" class="boton" />
             <br><br><br>
          </form> 
 
       </div>
 
       <!--Lateral derecho-->
-      <div id="lateral">
+      <div class="lateral">
           <!--Carga Usuario-->
-          <div id="ingreso">
+          <div class="ingreso">
             <br>
-           <img id="imgusr" src="../images/foto_usuario.jpg"  /> 
+           <img class="imgusr" src="../images/foto_usuario.jpg"  alt=""/> 
    
-           <form method="post" action="">
+           <form method="post" action="carga_img">
               <br>
-              <input type="submit" value="Cargar Imagen" id="btn_ing" />
+              <input type="submit" value="Cargar Imagen" class="boton" />
               <br>             
            </form>
 
@@ -147,9 +146,9 @@
       <!--Footer-->
       <div id="pie">
          <div>
-            <a href="http://www.facebook.com"><img src="../images/facebook.jpg"/></a>            
-            <a href="http://www.twitter.com"><img src="../images/twiter.jpg"/></a>            
-            <a href="http://www.google.com"><img src="../images/googlemas.jpg"/></a>            
+            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>
+            <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>
+            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>
          </div>
          <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>
@@ -158,7 +157,7 @@
    </div>
   </div>
 
-  </center>
+  </div>
 
  </body>
 
