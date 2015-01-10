@@ -13,6 +13,14 @@ input{
   float:left;
   margin-left:10%;
 }
+#form_contacto{
+  line-height: 1;
+  margin-left:4%;
+  width: 75%;
+  /*border:1px solid black;
+  border-radius: 10px;*/
+}
+
 /*Css contenedores de busquedas*/
 #Buscador{
   text-align: left;
@@ -67,8 +75,24 @@ input{
 #d_tabrep{
   overflow-y:auto;
   height: 400px;
-  width: 89%; 
+  width: 85%; 
 }
+#d_tabrep2{
+  overflow-y:auto;
+  height: 400px;
+  width: 94%; 
+}
+.rep_cab{
+     width: 92%;
+     border-top:1px solid black;
+     border-left: 1px solid black;
+     border-right: 1px solid black;
+     border-collapse:separate;
+     border-bottom:1px solid black;
+     margin-left: 14px;
+     table-layout: fixed;
+
+   }
 /*
 tbody { 
            display: block; 
@@ -99,13 +123,30 @@ td {
 .tbl_cod_rep {
   width:15%;
 }
+.tbl_cod_rep2 {
+  width:12%;
+}
 .tbl_nombre_rep {
   width:50%;
 }
-.tbl_cedula_rep {
-  width:20%;
+.tbl_nombre_det {
+  width:50%;
 }
-
+.tbl_nombre_rep2 {
+  width:54%;
+}
+.tbl_nombre_rep3 {
+  width:65%;
+}
+.tbl_nombre_rep4 {
+  width:53%;
+}
+.tbl_cedula_rep {
+  width:19%;
+}
+.tbl_ced_rep_cab {
+  width:18%;
+}
 /*******************/
 /*************************/
 /* Css Reportes */
@@ -130,10 +171,13 @@ td {
 #labtel1{
    float:left;
 }
+
 #labtel2{
    margin-left:10%;
 }
-
+#labtel3{
+   float:left;
+}
 input.nomape{
   width: 65%;
 }
@@ -146,6 +190,7 @@ input.nomape{
 
 #dscprod{
   width: 75%;
+  resize: none;
 }
 
 input.cod{

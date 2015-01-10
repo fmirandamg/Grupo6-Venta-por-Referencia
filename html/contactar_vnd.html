@@ -2,7 +2,7 @@
 
 <html lang = "es">
  <head>
-   <title>Venta por Referencia - Usuario</title>
+   <title>Venta por Referencia - Administrador</title>
 
    <meta charset="iso-8859-1">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,13 +22,12 @@
  </head>
 
  <body >
-
-   <img id="bg" src="../images/fondo_2.png"   alt=""/>
-
+   
+   <img id="bg" src="../images/fondo_2.png" alt="" />  
+   
 
  <!--Menu-->
     <!--<div id="menu">-->
-
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -42,9 +41,8 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="perfil_usr.html">Mi Perfil</a></li>
-            <li><a href="referenciado_usr.html">Referenciados</a></li>
-            <li><a href="promover_usr.html">Promover</a></li>
+            <li><a href="perfil_vnd.html">Mi Perfil</a></li>
+            <li><a href="contactar_vnd.html">Contactar</a></li>
 
             <li class="dropdown">
              <a class="dropdown-toggle" data-toggle="dropdown">
@@ -52,8 +50,8 @@
              <b class="caret"></b></a>
 
              <ul class="dropdown-menu">
-               <li><a href="rpt_refer_usr.html">Referenciados</a></li>
-               <li><a href="rpt_comis_usr.html">Comisiones</a></li>
+               <li><a href="rpt_contacto_vnd.html">Contactados</a></li>
+               <li><a href="rpt_prod_vnd.html">Prod. Vendidos</a></li>
              </ul>
            </li>
 
@@ -65,13 +63,13 @@
 
   <div id="ctr_gen">
   <div class="container">
-   <div class="starter-template">
+   <div class="starter-template">   
     <div id="Central">
 
     <!--Cabecera-->
       <div id="cabecera">
        <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="../images/logo_espol.gif"  alt=""/>
+        <img id="logo" src="../images/logo_espol.gif" alt=""/>
         <br>
         <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
       </div>
@@ -80,16 +78,16 @@
       <div class="Buscador2">
         <h3>Lista de Productos</h3>
         <h4>Buscar</h4>
-         <form method="post" action="bus_prod">
+         <form method="post" action="bus_descrip">
             <select>
               <option value="Codigo">Código</option>
               <option value="Nombres">Descripción</option>
             </select>
             <input type="text" name="buscar" class="buscar" />
             <input type="submit" value="Buscar" class="boton">
-         </form>
+         </form> 
 
-
+        
             <table class="tblbuscar" >
                <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
@@ -98,7 +96,7 @@
                      <th  >Descripción</th>
                   </tr>
                </thead>
-             </table>
+             </table> 
 
              <div class="d_tabla">
               <table class="tblbusdet" >
@@ -110,48 +108,48 @@
                  <tr>
                    <td ><a href="#">2</a></td>
                    <td >SILLAS ERGONÓMICAS</td>
-                 </tr>
-
+                 </tr>  
+                 
                </tbody>
               </table>
              </div>
          </div>
 
-         <!--Imnagen de Referidos-->
+         <!--Imnagen de Producto-->
       <div class="lateral">
           <div class="ingreso">
             <br>
-           <img class="imgusr" src="../images/prod1.jpg"  alt="" />
-
-           <form method="post" action="dato_prod">
+           <img class="imgusr" src="../images/prod1.jpg" alt="" /> 
+   
+           <form method="post" action="carg_imagen">
               <br>
               <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> RELOJ BLUETOOTH </textarea>
-              <br> <br>
+              <br> <br>             
            </form>
 
           </div>
       </div>
+      <br>
+
       <!--Referidos-->
       <div class="Buscador2">
-        <h3>Lista de Referidos</h3>
-        <h4>Buscar</h4>
+        <h3>Personas Referidas</h3>
+        <h4>Ordenar por</h4>
          <form method="post" action="cons_refer">
             <select>
-              <option value="Cedula">Cedula</option>
-              <option value="Nombres">Nombres</option>
-              <option value="Apellidos">Apellidos</option>
+                <option value="Codigo">Código</option>
+                <option value="Nombres">Nombres</option>
             </select>
-            <input type="text" name="buscar" class="buscar" />
-            <input type="submit" value="Buscar" class="boton">
-         </form>
+            <input type="submit" value="Consultar" class="boton">
+         </form> 
 
-
+        
             <table class="tblbuscar" >
                <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
                   <tr >
                      <th class="tbl_cod">Código</th>
-                     <th class="tbl_nombre">Nombres</th>
+                     <th class="tbl_nombre_rep3">Nombres</th>
                      <th >Cedula</th>
                   </tr>
                </thead>
@@ -162,7 +160,7 @@
                <tbody>
                  <tr>
                    <td class="tbl_cod"><a href="#">1</a></td>
-                   <td class="tbl_nombre">JOSE MIGUEL CARRASCO SANCHEZ</td>
+                   <td class="tbl_nombre_rep3">JOSE MIGUEL CARRASCO SANCHEZ</td>
                    <td >0918360951</td>
                  </tr>
                  <tr>
@@ -174,21 +172,42 @@
                </tbody>
               </table>
              </div>
-          <form method="post" action="prom_art">
-            <input type="submit" name="promover" value="Promover" class="boton">
-         </form>
+             
+              <div id="form_contacto">
+                <form method="post" action="proc_agendar">
+                  <br>
+                  <label>Observación</label>
+                  <br>
+                  <textarea rows="4" cols="25" id="dscprod" name="observacion" > </textarea>
+                  <br><br>
+                  <label>Contactado: </label>
+                  <select>
+                      <option value="S">Si</option>
+                      <option value="N">No</option>
+                  </select>
+                  <label>&nbsp;&nbsp;Venta:</label>
+                  <select>
+                      <option value="V">Vendido</option>
+                      <option value="N">No Interesado</option>
+                  </select>
+                  <br>
+                  <input type="submit" name="grabar" value="Grabar" class="boton">
+                  <br>
+               </form> 
+              </div>
+               <br><br>
          </div>
 
          <!--Imnagen de Referidos-->
       <div class="lateral">
           <div class="ingreso">
             <br>
-           <img class="imgusr" src="../images/foto_usuario.jpg"  alt="" />
-
-           <form method="post" action="Cons_Referido">
+           <img class="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
+   
+           <form method="post" action="carg_imgper">
               <br>
               <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> JOSE MIGUEL CARRASCO SANCHEZ </textarea>
-              <br> <br>
+              <br> <br>             
            </form>
 
           </div>
@@ -196,9 +215,9 @@
       <!--Footer-->
       <div id="pie">
          <div>
-            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>
-			<a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>
-            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>
+            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>            
+            <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>            
+            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>            
          </div>
          <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>

@@ -23,7 +23,7 @@
 
  <body >
    
-   <img id="bg" src="../images/fondo_2.png"  />  
+   <img id="bg" src="../images/fondo_2.png" alt="" />  
    
 
  <!--Menu-->
@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Ventas Por Referencia</a>
+          <a class="navbar-brand">Ventas Por Referencia</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">            
@@ -64,7 +64,7 @@
       </div>
     </nav>
 
-  <center>
+  <div id="ctr_gen">
   <div class="container">
    <div class="starter-template">   
     <div id="Central">
@@ -72,41 +72,40 @@
     <!--Cabecera-->
       <div id="cabecera">
        <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="../images/logo_espol.gif" />
+        <img id="logo" src="../images/logo_espol.gif" alt=""/>
         <br>
-        <p id="Tit2">Gana comisiones referenciando a tus amigos</p>
-        <p id="Tit2">Tenemos lo que tú necesitas</p>
+        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
       </div>
 
       <!--Productos-->
-      <div id="Buscador2">
+      <div class="Buscador2">
         <h3>Lista de Productos</h3>
-        <h4>Buscar</h3>
-         <form method="post" action="">
+        <h4>Buscar</h4>
+         <form method="post" action="bus_descrip">
             <select>
               <option value="Codigo">Código</option>
               <option value="Nombres">Descripción</option>
             </select>
-            <input type="text" name="buscar" id="buscar" />
-            <input type="submit" value="Buscar" id="btn_ing">
+            <input type="text" name="buscar" class="buscar" />
+            <input type="submit" value="Buscar" class="boton">
          </form> 
 
         
-            <table id="tblbuscar" >
+            <table class="tblbuscar" >
                <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
                   <tr >
-                     <th width=15% >Código</th>
+                     <th class="tbl_cod" >Código</th>
                      <th  >Descripción</th>
                   </tr>
                </thead>
              </table> 
 
-             <div id="d_tabla">
-              <table id="tblbusdet" >
+             <div class="d_tabla">
+              <table class="tblbusdet" >
                <tbody>
                  <tr>
-                   <td width=15%><a href="#">1</a></td>
+                   <td class="tbl_cod"><a href="#">1</a></td>
                    <td >RELOJ BLUETOOTH</td>
                  </tr>
                  <tr>
@@ -120,14 +119,14 @@
          </div>
 
          <!--Imnagen de Referidos-->
-      <div id="lateral">
-          <div id="ingreso">
+      <div class="lateral">
+          <div class="ingreso">
             <br>
-           <img id="imgusr" src="../images/prod1.jpg"  /> 
+           <img class="imgusr" src="../images/prod1.jpg" alt="" /> 
    
-           <form method="post" action="">
+           <form method="post" action="carg_imagen">
               <br>
-              <textarea rows="2" cols="20" id="nombres" name="nombres" readonly> RELOJ BLUETOOTH </textarea>
+              <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> RELOJ BLUETOOTH </textarea>
               <br> <br>             
            </form>
 
@@ -137,22 +136,22 @@
       <!--Referidos-->
       <div>
         <h3>Personas Referenciadas</h3>
-        <table id="tblbuscar" >
+        <table class="tblbuscar" >
                <thead >
                   <tr >
-                     <th width=15%>Código</th>
-                     <th width=65%>Nombres</th>
+                     <th class="tbl_cod">Código</th>
+                     <th class="tbl_nombre">Nombres</th>
                      <th >Cedula</th>
                   </tr>
                </thead>
              </table> 
 
-             <div id="d_tabla">
-              <table id="tblbusdet" >
+             <div class="d_tabla">
+              <table class="tblbusdet" >
                <tbody>
                  <tr>
-                   <td width=15%><a href="#">1</a></td>
-                   <td width=65%>JOSE MIGUEL CARRASCO SANCHEZ</td>
+                   <td class="tbl_cod"><a href="#">1</a></td>
+                   <td class="tbl_nombre">JOSE MIGUEL CARRASCO SANCHEZ</td>
                    <td >0918360951</td>
                  </tr>
                  <tr>
@@ -177,37 +176,37 @@
       </div>
       <br>
       <!--Vendedores-->
-      <div id="Buscador2">
+      <div class="Buscador2">
         <h3>Lista de Vendedores</h3>
-        <h4>Buscar</h3>
-         <form method="post" action="">
+        <h4>Buscar</h4>
+         <form method="post" action="bus_nom">
             <select>
               <option value="Cedula">Cedula</option>
               <option value="Nombres">Nombres</option>
               <option value="Apellidos">Apellidos</option>
             </select>
-            <input type="text" name="buscar" id="buscar" />
-            <input type="submit" value="Buscar" id="btn_ing">
+            <input type="text" name="buscar" class="buscar" />
+            <input type="submit" value="Buscar" class="boton">
          </form> 
 
         
-            <table id="tblbuscar" >
+            <table class="tblbuscar" >
                <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
                   <tr >
-                     <th width=15%>Código</th>
-                     <th width=65%>Nombres</th>
+                     <th class="tbl_cod">Código</th>
+                     <th class="tbl_nombre">Nombres</th>
                      <th >Cedula</th>
                   </tr>
                </thead>
              </table> 
 
-             <div id="d_tabla">
-              <table id="tblbusdet" >
+             <div class="d_tabla">
+              <table class="tblbusdet" >
                <tbody>
                  <tr>
-                   <td width=15%><a href="#">1</a></td>
-                   <td width=65%>ADRIAN DAVID MIRANDA GUADALUPE</td>
+                   <td class="tbl_cod"><a href="#">1</a></td>
+                   <td class="tbl_nombre">ADRIAN DAVID MIRANDA GUADALUPE</td>
                    <td >0918360258</td>
                  </tr>
                  <tr>
@@ -219,20 +218,20 @@
                </tbody>
               </table>
              </div>
-          <form method="post" action="">
-            <input type="submit" name="agendar" value="Agendar" id="btn_ing">
+          <form method="post" action="proc_agendar">
+            <input type="submit" name="agendar" value="Agendar" class="boton">
          </form> 
          </div>
 
          <!--Imnagen de Referidos-->
-      <div id="lateral">
-          <div id="ingreso">
+      <div class="lateral">
+          <div class="ingreso">
             <br>
-           <img id="imgusr" src="../images/foto_usuario.jpg"  /> 
+           <img class="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
    
-           <form method="post" action="">
+           <form method="post" action="carg_imgper">
               <br>
-              <textarea rows="2" cols="20" id="nombres" name="nombres" readonly> ADRIAN DAVID MIRANDA GUADALUPE </textarea>
+              <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> ADRIAN DAVID MIRANDA GUADALUPE </textarea>
               <br> <br>             
            </form>
 
@@ -241,9 +240,9 @@
       <!--Footer-->
       <div id="pie">
          <div>
-            <a href="http://www.facebook.com"><img src="../images/facebook.jpg"/></a>            
-            <a href="http://www.twitter.com"><img src="../images/twiter.jpg"/></a>            
-            <a href="http://www.google.com"><img src="../images/googlemas.jpg"/></a>            
+            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>            
+            <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>            
+            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>            
          </div>
          <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>
@@ -252,7 +251,7 @@
    </div>
   </div>
 
-  </center>
+  </div>
 
  </body>
 
