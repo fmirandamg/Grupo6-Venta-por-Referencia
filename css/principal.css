@@ -77,6 +77,25 @@ body {
    font-weight: bold;
    line-height: 1;
 }
+
+.titulos{
+  text-align: left;
+  margin-left: 45px;
+}
+
+.cont_datos{
+   width: 80%;
+   border: 1px Solid black;
+   border-radius: 10px;
+   margin-left: 45px;
+   border-radius: 15px;
+   font-size: 12pt;
+   font-style: arial;
+   font-weight: bold;
+   line-height: 1.5;
+   background-color: #ECE6E6;
+   text-align: left;
+}
 /*validar*/
 #conimg{
   width: 40%;

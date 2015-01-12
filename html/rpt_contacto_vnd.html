@@ -2,7 +2,7 @@
 
 <html lang = "es">
  <head>
-   <title>Venta por Referencia - Usuario</title>
+   <title>Venta por Referencia - Administrador</title>
 
    <meta charset="iso-8859-1">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,12 +26,11 @@
  </head>
 
  <body >
-
-   <img id="bg" src="../images/fondo_2.png" alt="" />
-
+   
+   <img id="bg" src="../images/fondo_2.png" alt="" />  
+   
   <!--Menu-->
     <!--<div id="menu">-->
-
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -41,13 +40,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" >Ventas Por Referencia</a>
+          <a class="navbar-brand">Ventas Por Referencia</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="perfil_usr.html">Mi Perfil</a></li>
-            <li><a href="referenciado_usr.html">Referenciados</a></li>
-            <li><a href="promover_usr.html">Promover</a></li>
+            <li><a href="perfil_vnd.html">Mi Perfil</a></li>
+            <li><a href="contactar_vnd.html">Contactar</a></li>
 
             <li class="dropdown">
              <a class="dropdown-toggle" data-toggle="dropdown">
@@ -55,8 +53,8 @@
              <b class="caret"></b></a>
 
              <ul class="dropdown-menu">
-               <li><a href="rpt_refer_usr.html">Referenciados</a></li>
-               <li><a href="rpt_comis_usr.html">Comisiones</a></li>
+               <li><a href="rpt_contacto_vnd.html">Contactados</a></li>
+               <li><a href="rpt_prod_vnd.html">Prod. Vendidos</a></li>
              </ul>
            </li>
 
@@ -68,7 +66,7 @@
 
   <div id="ctr_gen">
   <div class="container">
-   <div class="starter-template">
+   <div class="starter-template">   
     <div id="Central">
 
     <!--Cabecera-->
@@ -82,22 +80,22 @@
       <!--Pantalla Criterio-->
         <!--Criterio Nombre-->
         <div id="Buscador">
-         <h3>Consulta de Referenciados</h3>
-         <h4>Criterio de Nombres</h4>
-         <form method="post" action="buscar_nom">
+         <h3>Consulta de Productos</h3>
+         <h4>Criterio de Descripción</h4>
+         <form method="post" action="bus_nom">
             <select>
               <option value="tod">Todos</option>
-              <option value="Cedula">Cedula</option>
-              <option value="Nombres">Nombres</option>
-              <option value="Apellidos">Apellidos</option>
+              <option value="codigo">Código</option>
+              <option value="Nombres">Descripción</option>
             </select>
-            <input type="text" name="buscar" class="buscar" />
-         </form>
-
+            <input type="text" name="buscar" class="buscar"  />
+         </form> 
         </div>
+        <br>
         <!--Rango de Fechas-->
          <div id="rep_fecha">
-           <form method="post" action="Buscar_res">
+           <form method="post" action="bus_fech">
+            <label><strong>Fecha de Contacto</strong></label>
             <br>
             <label id="labtel1">Fecha Desde</label>
             <label id="labtel2">Fecha Hasta</label>
@@ -111,51 +109,56 @@
         <br><br><br><br><br>
       <!--Fin Campos de Criterio-->
       <!--Tabla de Resultados-->
-        <div id="repor_cont">
-          <table class="tblbuscar" >
+        <div id="repor_convnd">
+          <table class="rep_cab_convnd" >
                <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
                   <tr >
-                     <th class="tbl_cod_rep" >Código</th>
-                     <th class="tbl_nombre_rep" >Nombres</th>
-                     <th class="tbl_cedula_rep" >Cedula</th>
-                     <th  >Fechas</th>
+                     <th class="tbl_cod_prod" >Código</th>
+                     <th class="tbl_des_prod">Descripción</th>
+                     <th class="tbl_ced_cont" >Ced. Referido</th>
+                     <th class="tbl_nom_cont">Nom. Referido</th>
+                     <th >Fec.Contacto</th>
                   </tr>
                </thead>
-             </table>
+             </table> 
 
-             <div id="d_tabrep">
-              <table class="tblbusdet" >
+             <div id="d_tab_convnd">
+              <table class="tbldet_convnd" >
                <tbody>
                  <tr>
-                   <td class="tbl_cod_rep">1</td>
-                   <td class="tbl_nombre_rep">FRANCISCO RAUL MIRANDA GARCIA</td>
-                   <td class="tbl_cedula_rep">0918360798</td>
-                   <td >01/01/2015</td>
+                   <td class="tbl_cod_prod">1</td>
+                   <td class="tbl_des_prod">RELOJ BLUETOOTH</td>
+                   <td class="tbl_ced_cont">0918360951</td>
+                   <td class="tbl_nom_cont">JOSE MIGUEL CARRASCO SANCHEZ</td>
+                   <td >10/01/2015</td>
                  </tr>
                  <tr>
                    <td >2</td>
-                   <td >KARINA CECILIA GUADALUPE CARRIEL</td>
-                   <td >0918360798</td>
-                   <td >01/01/2015</td>
-                 </tr>
+                   <td >SILLAS ERGONÓMICAS</td>
+                   <td >0918360473</td>
+                   <td >MARIA CRISTINA GALARZA MARIN</td>
+                   <td >09/01/2015</td>
+                 </tr>  
                  <tr>
                    <td >2</td>
-                   <td >KARINA CECILIA GUADALUPE CARRIEL</td>
-                   <td >0918360798</td>
-                   <td >01/01/2015</td>
-                 </tr>             
+                   <td >SILLAS ERGONÓMICAS</td>
+                   <td >0918360951</td>
+                   <td >JOSE MIGUEL CARRASCO SANCHEZ</td>
+                   <td >10/01/2015</td>
+                 </tr>
+
                </tbody>
               </table>
              </div>
-         </div>
+         </div>    
       <!--Fin de Tabla de Resultados-->
       <!--Footer-->
       <div id="pie">
          <div>
-            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>
-			      <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>
-            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>
+            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>            
+            <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>            
+            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>            
          </div>
          <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>

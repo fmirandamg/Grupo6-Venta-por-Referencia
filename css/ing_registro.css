@@ -16,11 +16,19 @@ input{
 #form_contacto{
   line-height: 1;
   margin-left:4%;
-  width: 75%;
+  width: 40%;
+  float: left;
+  text-align: left;
   /*border:1px solid black;
   border-radius: 10px;*/
 }
-
+#dat_contacto{
+  line-height: 1;
+  margin-left:10%;
+  width: 44%;
+  float: left;
+  text-align: left;
+}
 /*Css contenedores de busquedas*/
 #Buscador{
   text-align: left;
@@ -58,7 +66,7 @@ input{
      border-right: 1px solid black;
      border-collapse:separate;
      border-bottom:1px solid black;
-     margin-left: 14px;
+     margin-left: 12px;
      table-layout: fixed;
 }
 .tblbusdet{
@@ -75,12 +83,12 @@ input{
 #d_tabrep{
   overflow-y:auto;
   height: 400px;
-  width: 85%; 
+  width: 89%; 
 }
 #d_tabrep2{
   overflow-y:auto;
   height: 400px;
-  width: 94%; 
+  width: 96%; 
 }
 .rep_cab{
      width: 92%;
@@ -93,22 +101,6 @@ input{
      table-layout: fixed;
 
    }
-/*
-tbody { 
-           display: block; 
-           height: 50px; 
-           overflow: auto; 
-           width: 100%; }
-
-td {
-  border: 1px solid black;
-}
-#fil_cod{
-  width: 20%;
-}
-#fil_nom{
- width: 200%; 
-}
 /****CSS TABLAS ****/
 .tbl_cod {
   width:15%;
@@ -147,6 +139,47 @@ td {
 .tbl_ced_rep_cab {
   width:18%;
 }
+/*Colum rpt_contacto_vnd*/
+.tbl_cod_prod{
+ width:9%; 
+}
+.tbl_des_prod{
+ width:26%; 
+}
+.tbl_ced_cont{
+ width:16%; 
+}
+.tbl_nom_cont{
+ width:35%; 
+}
+.rep_cab_convnd{
+     width: 97%;
+     border-top:1px solid black;
+     border-left: 1px solid black;
+     border-right: 1px solid black;
+     border-collapse:separate;
+     border-bottom:1px solid black;
+     margin-left: 14px;
+     table-layout: fixed;
+
+   }
+.tbldet_convnd{
+     width: 99%;
+     border-collapse:separate;
+     margin-left: 14px;
+     table-layout: fixed;
+}
+#d_tab_convnd{
+  overflow-y:auto;
+  height: 400px;
+  width: 98%; 
+}
+#repor_convnd{
+  text-align: left;
+  width: 97%;
+  margin-left: 10px;
+}
+/**/
 /*******************/
 /*************************/
 /* Css Reportes */

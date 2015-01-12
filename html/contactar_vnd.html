@@ -124,7 +124,7 @@
            <form method="post" action="carg_imagen">
               <br>
               <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> RELOJ BLUETOOTH </textarea>
-              <br> <br>             
+              <br> <br>     
            </form>
 
           </div>
@@ -172,7 +172,24 @@
                </tbody>
               </table>
              </div>
-             
+         </div>
+
+         <!--Imnagen de Referidos-->
+      <div class="lateral">
+          <div class="ingreso">
+            <br>
+           <img class="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
+   
+           <form method="post" action="carg_imgper">
+              <br>
+              <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> JOSE MIGUEL CARRASCO SANCHEZ </textarea>
+              <br> <br>             
+           </form>
+
+          </div>
+      </div>
+
+      <br><br>
               <div id="form_contacto">
                 <form method="post" action="proc_agendar">
                   <br>
@@ -190,28 +207,49 @@
                       <option value="V">Vendido</option>
                       <option value="N">No Interesado</option>
                   </select>
+                  <br><br>
+                  <label>Forma de Pago:</label>
+                  <select>
+                      <option value="D">Depósito </option>
+                      <option value="T">Transferencia</option>
+                  </select>
+                  <label>&nbsp;&nbsp;Envio:</label>
+                  <select>
+                      <option value="S">Si</option>
+                      <option value="N">No</option>
+                  </select>
+                  <br><br>
+                  <label>Dirección Entrega</label>
+                  <br>
+                  <textarea rows="2" cols="25" id="dscprod" name="entrega" > </textarea>
                   <br>
                   <input type="submit" name="grabar" value="Grabar" class="boton">
-                  <br>
+                  <br><br>
                </form> 
               </div>
-               <br><br>
-         </div>
-
-         <!--Imnagen de Referidos-->
-      <div class="lateral">
-          <div class="ingreso">
-            <br>
-           <img class="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
-   
-           <form method="post" action="carg_imgper">
-              <br>
-              <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> JOSE MIGUEL CARRASCO SANCHEZ </textarea>
-              <br> <br>             
-           </form>
-
-          </div>
-      </div>
+              <div id="dat_contacto">
+                <form method="post" action="carg_datos">
+                    <label>Cedula</label>
+                    <br>
+                    <input type="text" class="ced" name="cedula" value="099999999" readonly/>
+                    <br><br>
+                    <label>Fecha de Contacto</label>
+                    <br>
+                    <input type="text" class="ced" name="fecha" value="28/12/2014" readonly/>
+                    <br><br>
+                    <label id="labtel1">Telefono 1</label>
+                    <label id="labtel2">Telefono 2</label>
+                    <br>
+                    <input type="text" class="telf1" name="tel1" value="042496785" readonly/>
+                    <input type="text" class="telf2" name="tel2" value="0978521456" readonly/>
+                    <br>
+                    <label>Email</label>
+                    <br>
+                    <input type="email" class="nomape" name="tel2" value="josecarr@gmail.com" readonly/>
+                    <br><br><br>
+                  </form>  
+              </div>
+              
       <!--Footer-->
       <div id="pie">
          <div>
