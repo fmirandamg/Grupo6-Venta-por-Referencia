@@ -225,7 +225,10 @@ input.nomape{
   width: 75%;
   resize: none;
 }
-
+#dscprod2{
+  width: 76%;
+  resize: none;
+}
 input.cod{
   width: 20%;
 }

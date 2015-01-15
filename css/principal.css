@@ -27,7 +27,7 @@ body {
 /*Cabecera*/
 #cabecera{
    text-align: center;
-   font-style: arial;
+   /*font-style:  arial;*/
    font-weight: bold;
    line-height: 1;
    color: black;
@@ -73,7 +73,7 @@ body {
    width: 70%;
    border-radius: 15px;
    font-size: 14pt;
-   font-style: arial;
+   /*font-style: arial;*/
    font-weight: bold;
    line-height: 1;
 }
@@ -90,7 +90,7 @@ body {
    margin-left: 45px;
    border-radius: 15px;
    font-size: 12pt;
-   font-style: arial;
+   /*font-style: arial;*/
    font-weight: bold;
    line-height: 1.5;
    background-color: #ECE6E6;
