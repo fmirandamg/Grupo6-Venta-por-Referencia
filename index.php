@@ -4,7 +4,7 @@
  <head>
    <title>Venta por Referencia</title>
 
-   <meta charset="utf-8">
+   <meta charset="iso-8859-1">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta name="author" content="Grupo 6">
@@ -76,7 +76,7 @@
        <p id="Tit1">Ventas por Referencia</p>
         <img id="logo" src="images/logo_espol.gif" alt="" />
         <br>
-        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
+        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tu necesitas</p>
       </div>
 
       <!--Lateral Izquierdo-->
@@ -86,14 +86,14 @@
        <img class="imagenes" src="images/prod1.jpg" alt=""/>
         <br>
         <p><ins>Reloj Bluetooth</ins></p>
-        <p>Conéctese a su celular vea Mensajes,</p>
+        <p>Conectese a su celular vea Mensajes,</p>
         <p>llamadas Entrantes y mucho mas..</p>
         <p>Precio: 150.00</p>
         <br>
 
        <img class="imagenes" src="images/prod2.jpg" alt="" />
         <br>
-        <p><ins>Sillas Ergonómicas</ins></p>
+        <p><ins>Sillas Ergonomicas</ins></p>
         <p>Disfrute de la comodidad con</p>
         <p>Estilo</p>
         <p>Precio: 80.00</p>
@@ -122,17 +122,17 @@
           <!--Noticias-->
           <div id="noticias">
             <h4><b><ins>Ultimas Noticias</ins></b></h4>
-            <p><b>Débil aumento de las ventas en el mercado español del arte</b></p>
+            <p><b>Debil aumento de las ventas en el mercado espanol del arte</b></p>
 	    <p>
-              El presidente de la Fundación Arte y Mecenazgo (impulsada por 'la Caixa'),
-              Leopoldo Rodés; la directora de la Fundación Arte y Mecenazgo, Mercedes Basso; y la autora del informe,
+              El presidente de la Fundacion Arte y Mecenazgo (impulsada por 'la Caixa'),
+              Leopoldo Rodes; la directora de la Fundacion Arte y Mecenazgo, Mercedes Basso; y la autora del informe,
               Clare McAndrew, fundadora y directora general de Arts Economics, han presentado El mercado español del
-              arte en 2014 en el que el sector presenta, por tercer año consecutivo, un crecimiento positivo del 3%,
-              aunque débil, y alcanza sus niveles máximos desde el inicio de la crisis en 2008.
+              arte en 2014 en el que el sector presenta, por tercer consecutivo, un crecimiento positivo del 3%,
+              aunque debil, y alcanza sus niveles maximos desde el inicio de la crisis en 2008.
            </p>
             <a href="http://www.elcultural.es/noticias/arte/Debil-aumento-de-las-ventas-en-el-mercado-espanol-del-arte/7061">
              <ins>
-              Mas Información
+              Mas Informacion
              </ins>
             </a>
             <br>
@@ -148,7 +148,7 @@
             <a href="http://www.twitter.com"><img src="images/twiter.jpg" alt=""/></a>
             <a href="http://www.google.com"><img src="images/googlemas.jpg" alt=""/></a>
          </div>
-         <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
+         <p>Copyright 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
       </div>
 
   </div>
