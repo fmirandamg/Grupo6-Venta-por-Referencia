@@ -126,7 +126,7 @@
 	    <p>
               El presidente de la Fundacion Arte y Mecenazgo (impulsada por 'la Caixa'),
               Leopoldo Rodes; la directora de la Fundacion Arte y Mecenazgo, Mercedes Basso; y la autora del informe,
-              Clare McAndrew, fundadora y directora general de Arts Economics, han presentado El mercado español del
+              Clare McAndrew, fundadora y directora general de Arts Economics, han presentado El mercado espanol del
               arte en 2014 en el que el sector presenta, por tercer consecutivo, un crecimiento positivo del 3%,
               aunque debil, y alcanza sus niveles maximos desde el inicio de la crisis en 2008.
            </p>
