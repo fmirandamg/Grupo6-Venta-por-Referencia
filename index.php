@@ -59,7 +59,7 @@
                 <br>
                <input type="submit" value="Ingresar" class="boton" />
 		           <br>
-               <a href="html/registro_usr.html"><ins>Registrate</ins></a>
+               <a href="html/registro_usr.php"><ins>Registrate</ins></a>
             </form>
             <br>
           </div>

@@ -30,25 +30,25 @@
       <div class="cont_datos">
         <br>
         <p>
-            &nbsp; Somos una empresa dedicada a la compra y distribución de una variedad de productos para todo tipo de interés y necesidades, brindando al mismo tiempo la oportunidad de poder ganar comisiones de las ventas a posibles clientes que los registrados al sitio pueden referir en cualquier momento y a cualquier hora del día.
+            &nbsp; Somos una empresa dedicada a la compra y distribuci&oacuten de una variedad de productos para todo tipo de interés y necesidades, brindando al mismo tiempo la oportunidad de poder ganar comisiones de las ventas a posibles clientes que los registrados al sitio pueden referir en cualquier momento y a cualquier hora del día.
         </p>
         <br>
       </div>
 
-      <h2 class="titulos"><strong>Visión</strong></h2>
+      <h2 class="titulos"><strong>Visi&oacuten</strong></h2>
       <div class="cont_datos">
         <br>
         <p>
-            &nbsp; Poder llegar a un gran número de clientes a nivel nacional y ser el mayor distribuidor de productos dando de esta forma ganancias a nuestros vendedores potenciales amplaindo el mercado.
+            &nbsp; Poder llegar a un gran n&uacutemero de clientes a nivel nacional y ser el mayor distribuidor de productos dando de esta forma ganancias a nuestros vendedores potenciales ampliando el mercado.
         </p>
         <br>
       </div>
 
-      <h2 class="titulos"><strong>Misión</strong></h2>
+      <h2 class="titulos"><strong>Misi&oacuten</strong></h2>
       <div class="cont_datos">
         <br>
         <p>
-            &nbsp; Promocionar y motivar a un gran número de suscriptores para conseguir el mayor número de referidos posibles y generar un alto volumen de ventas que situaran a la empresa como una de las mejores opciones de compra y venta.
+            &nbsp; Promocionar y motivar a un gran n&uacutemero de suscriptores para conseguir el mayor n&uacutemero de referidos posibles y generar un alto volumen de ventas que situaran a la empresa como una de las mejores opciones de compra y venta.
         </p>
         <br>
       </div>
