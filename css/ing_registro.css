@@ -13,6 +13,18 @@ input{
   float:left;
   margin-left:10%;
 }
+
+#resul_cons{
+  text-align: left;
+  width: 75%;
+  border:2px solid black;
+  line-height: 1;
+  float:left;
+  margin-left:10%;
+  border-radius: 15px 15px 15px 15px;
+  font-size: 18px;
+}
+
 #form_contacto{
   line-height: 1;
   margin-left:4%;
@@ -80,6 +92,12 @@ input{
   height: 70px;
   width: 89%; 
 }
+.d_tabl_result{
+  overflow-y:auto;
+  height: 300px;
+  width: 89%; 
+}
+
 #d_tabrep{
   overflow-y:auto;
   height: 400px;
@@ -179,6 +197,7 @@ input{
   width: 97%;
   margin-left: 10px;
 }
+
 /**/
 /*******************/
 /*************************/

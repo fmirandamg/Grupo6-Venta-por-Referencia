@@ -69,10 +69,9 @@
          </form> 
 
       </div>
-
-      <!--Lateral derecho-->
+      
+      <!-- 
       <div class="lateral">
-          <!--Carga Usuario-->
           <div class="ingreso">
             <br>
            <img class="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
@@ -85,6 +84,7 @@
 
           </div>
       </div>
+      -->
 
      <!--Fin divisón central-->
       <!--Footer-->

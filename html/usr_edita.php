@@ -2,21 +2,19 @@
 
 <html lang = "es">
  <head>
-  <?php  include '../plantillas/cabecera2.html';  ?>
+   <?php  include '../plantillas/cabecera2.html';  ?>
 
  </head>
 
  <body >
    
-   <?php  include '../plantillas/fondo2.html';  ?> 
+   <?php  include '../plantillas/fondo2.html';  ?>  
    
 
  <!--Menu-->
     <!--<div id="menu">-->
+     <?php  include '../plantillas/menu_administrador.html';  ?>
 
-    <?php  include '../plantillas/menu_principal2.html';  ?>
-
-      <!-- </div> -->
   <div id="ctr_gen">
   <div class="container">
    <div class="starter-template">   
@@ -25,20 +23,22 @@
     <!--Cabecera-->
       <?php  include '../plantillas/logo2.html';  ?>
 
-      <!--Formulario Central-->
-      <br>
+      <!--Busqueda-->
+
       <div id="resul_cons">
-        <h3>Registro Usuario</h3>
+        <h3>Actualizaci&oacuten de Datos</h3>
         <br>
-        <?php
+
+          <?php
+          $codigo=$_POST["codigo"];
           $nombres=$_POST["nombre"];
           $apellidos=$_POST["apellido"];
           $cedula=$_POST["cedula"];
           $fecha=$_POST["fecha"];
-          $estado="A";
-          $tipo="USR";
+          $tipo=$_POST["combo_usr"];
           $usuario=$_POST["usr"];
           $password=$_POST["psw"];
+          $estado="A";
           $mail=$_POST["mail"];
           $foto="";
           $tel1=$_POST["tel1"];
@@ -51,7 +51,7 @@
           include_once("../clases/SegUsrCollector.php");
 
           $usuarioObj = new SegUsrCollector();
-          $usuarioObj->createusuario($nombres,$apellidos,$cedula,$fecha,$estado,
+          $usuarioObj->updateusuario($codigo,$nombres,$apellidos,$cedula,$fecha,$estado,
                                      $tipo,$usuario,$password,$mail,$foto,
                                      $tel1,$tel2);
 
@@ -67,28 +67,30 @@
           echo "<B> Registro Grabado Exitosamente </B> </br></br>";
           ?>
           
-           <div><a href="../index.php">Volver al Inicio</a>  </br> </br> </div>
+           <div><a href="usuarios_adm.php">Regresar</a>  </br> </br> </div>
+
+
+          
       </div>
-      <br><br>
-      <!--Lateral derecho-->
-      <!--
-      <div class="lateral">
+       <!--
+      <div class="lateral">>
           <div class="ingreso">
             <br>
-           <img class="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
+           <img id="imgusr" src="../images/foto_usuario.jpg" alt="" /> 
    
            <form method="post" action="carg_img">
               <br>
-              <input type="submit" value="Cargar Imagen" class="boton" />
+              <input type="submit" value="Cargar Imagen" class="boton"/>
               <br>             
            </form>
 
           </div>
       </div>
      -->
+
      <!--Fin divisón central-->
       <!--Footer-->
-       <?php  include '../plantillas/footer2.html';  ?>
+      <?php  include '../plantillas/footer2.html';  ?>
 
     </div>
    </div>
