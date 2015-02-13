@@ -1,0 +1,13 @@
+#nav{
+   margin-left: 210px;
+   margin-right: 210px;
+   margin-top:0px;
+   width: 75%
+   position: center;
+   text-align: center; 
+}
+.navbar{
+   background:#000000;
+   border-radius: 3px;
+   margin: 7px 0;
+}
