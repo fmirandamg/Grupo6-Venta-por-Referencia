@@ -86,10 +86,10 @@ CREATE TABLE IF NOT EXISTS `adm_segui_estados` (
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `inv_prosucto`
+-- Estructura de tabla para la tabla `inv_producto`
 --
 
-CREATE TABLE IF NOT EXISTS `inv_prosucto` (
+CREATE TABLE IF NOT EXISTS `inv_producto` (
   `PROD_CODIGO` int(11) NOT NULL AUTO_INCREMENT,
   `PROD_DESCRIPCION` varchar(50) NOT NULL,
   `PROD_CANTIDAD` int(10) NOT NULL,
