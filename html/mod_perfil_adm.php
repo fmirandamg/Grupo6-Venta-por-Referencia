@@ -16,7 +16,7 @@
 
  <!--Menu-->
     <!--<div id="menu">-->
-     <?php  include '../plantillas/menu_administrador.html';  ?>
+    <?php  include '../plantillas/menu_usuario.html';  ?>
 
   <div id="ctr_gen">
   <div class="container">
@@ -70,7 +70,7 @@
           echo "<B> Registro Grabado Exitosamente </B> </br></br>";
           ?>
           
-           <div><a href="usuarios_adm.php">Regresar</a>  </br> </br> </div>
+           <div><a href="perfil_adm.php">Regresar</a>  </br> </br> </div>
 
 
           

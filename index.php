@@ -1,3 +1,10 @@
+<?php
+ $visita = isset($_COOKIE['visita']) ? $_COOKIE['visita'] : "Primera vez";
+ $visita_actual = date("c");
+ setcookie('visita',$visita_actual,(time()+60*60*24*30));
+ session_start();  
+?>
+
 <!DOCTYPE HTML>
 
 <html lang = "es">
@@ -23,6 +30,17 @@
     <div id="Central">
     <!--Cabecera-->
        <?php  include 'plantillas/logo.html';  ?>
+      
+       <?php
+       if (isset($_SESSION['usuario'])) {
+          session_destroy();
+        }
+       
+       if (isset($_CODIGO['codigo'])) {
+          session_destroy();
+        }
+
+       ?> 
 
       <!--Lateral Izquierdo-->
       <div id="contenido">
@@ -36,10 +54,10 @@
           <!--Ingreso sign In-->
           <div class="ingreso">
             <br>
-	    <form method="post" action="Ing_sesion">
+	    <form method="post" action="html/ing_sesion.php">
                <input type="text" id="usuario" name="user" value="" placeholder="Usuario" required="required" autofocus="autofocus" />
                 <br><br>
-               <input type="password" id="password" name="psw" placeholder="Password">
+               <input type="password" id="password" name="passw" placeholder="Password">
                 <br>
                <input type="submit" value="Ingresar" class="boton" />
 		           <br>

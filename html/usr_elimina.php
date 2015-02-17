@@ -1,3 +1,6 @@
+<?php
+ session_start();  
+?>
 <!DOCTYPE HTML>
 
 <html lang = "es">
@@ -26,7 +29,7 @@
       <!--Busqueda-->
 
       <div id="resul_cons">
-        <h3>Actualizaci&oacuten de Datos</h3>
+        <h3>Eliminaci&oacuten de Datos</h3>
         <br>
 
           <?php

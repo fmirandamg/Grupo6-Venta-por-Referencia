@@ -17,6 +17,29 @@ class SegUsrCollector extends Collector
     return $Objusuario;
   }
 
+   function showUsrEnt($usr) {
+    $row = self::$db->getRows("SELECT * FROM venta_refer.seg_usuario where USR_USUARIO = ? ", array("{$usr}")); 
+     
+    if (empty($row)) {
+      $Objusuario = new seg_usuario("","","",
+                                    "","","","",
+                                    "","","",
+                                    "","","",
+                                    ""
+                                  );
+
+    } else {
+
+    $Objusuario = new seg_usuario($row[0]{'USR_CODIGO'},$row[0]{'USR_NOMBRES'},$row[0]{'USR_APELLIDOS'},
+                                  $row[0]{'USR_CEDULA'},$row[0]{'USR_FECHA'},$row[0]{'USR_ESTADO'},$row[0]{'USR_ULT_ACCESO'},
+                                  $row[0]{'TIP_CODIGO'},$row[0]{'USR_USUARIO'},$row[0]{'USR_PASSWORD'},
+                                  $row[0]{'USR_EMAIL'},$row[0]{'USR_FOTO'},$row[0]{'USR_TEL1'},
+                                  $row[0]{'USR_TEL2'}
+                                  );
+    }
+    return $Objusuario;
+  }
+
   function createusuario($nombres,$apellidos,$cedula,$fecha,$estado,
                          $tipo,$usuario,$password,$mail,$foto,
                          $tel1,$tel2) {    
@@ -42,8 +65,8 @@ class SegUsrCollector extends Collector
     return $arrayusuario;        
   }
 
-  function usuariosXcedula($cedula) {
-    $rows = self::$db->getRows("SELECT * FROM venta_refer.seg_usuario where USR_CEDULA like '% ? %' ", array("{$cedula}"));        
+  function usuariosXcedula($cedula) {     
+    $rows = self::$db->getRows("SELECT * FROM venta_refer.seg_usuario where USR_CEDULA like  ?", array("%{$cedula}%"));        
     $arrayusuario= array();        
     foreach ($rows as $c){
       $aux = new seg_usuario($c{'USR_CODIGO'},$c{'USR_NOMBRES'},$c{'USR_APELLIDOS'},$c{'USR_CEDULA'},
@@ -54,7 +77,7 @@ class SegUsrCollector extends Collector
   }
 
   function usuariosXnombres($nombres) {
-    $rows = self::$db->getRows("SELECT * FROM venta_refer.seg_usuario where USR_NOMBRES like '%?%' ", array("{$nombres}"));        
+    $rows = self::$db->getRows("SELECT * FROM venta_refer.seg_usuario where USR_NOMBRES like ?", array("%{$nombres}%"));        
     $arrayusuario= array();        
     foreach ($rows as $c){
       $aux = new seg_usuario($c{'USR_CODIGO'},$c{'USR_NOMBRES'},$c{'USR_APELLIDOS'},$c{'USR_CEDULA'},
@@ -65,7 +88,7 @@ class SegUsrCollector extends Collector
   }
   
   function usuariosXapellidos($apellidos) {
-    $rows = self::$db->getRows("SELECT * FROM venta_refer.seg_usuario where USR_APELLIDOS like '% ? %' ", array("{$apellidos}"));        
+    $rows = self::$db->getRows("SELECT * FROM venta_refer.seg_usuario where USR_APELLIDOS like ?", array("%{$apellidos}%"));        
     $arrayusuario= array();        
     foreach ($rows as $c){
       $aux = new seg_usuario($c{'USR_CODIGO'},$c{'USR_NOMBRES'},$c{'USR_APELLIDOS'},$c{'USR_CEDULA'},

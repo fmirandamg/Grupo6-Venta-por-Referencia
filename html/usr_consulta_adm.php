@@ -1,3 +1,6 @@
+<?php
+ session_start();  
+?>
 <!DOCTYPE HTML>
 
 <html lang = "es">
@@ -59,8 +62,8 @@
                   echo "<tr>";
                   echo "<td class='tbl_cod'>".$objusr2->getIdusuario() ."</td>";
                   echo "<td class='tbl_nombre'>".$objusr2->getNombre()." ".$objusr2->getApellido()."</td>";
-                  echo "<td>".$objusr2->getCedula()."&nbsp;</td>";
-                  echo "<td><a href='usr_form_editar.php?id=".$objusr2->getIdusuario()."'>Editar</a></td>";
+                  echo "<td>".$objusr2->getCedula()."</td>";
+                  echo "<td><a href='usr_form_editar.php?id=".$objusr2->getIdusuario()."'>&nbsp;&nbsp;&nbsp;&nbsp;Editar</a></td>";
                   echo "<td><a href='usr_elimina.php?id=".$objusr2->getIdusuario()."'>Eliminar</a></td>"; 
                   echo "</tr>"; 
                  }
@@ -69,9 +72,11 @@
                </tbody>
               </table>
              </div>
-
+      <br><br>       
+      <div><a href="usuarios_adm.php">Regresar</a>  </br> </br> </div>
       </div>
       <br><br><br><br>
+
 
       <!--Busqueda-->
 

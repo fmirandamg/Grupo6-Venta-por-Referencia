@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav">            
             <li><a href="perfil_adm.php">Mi Perfil</a></li>
             <li><a href="usuarios_adm.php">Usuarios</a></li>
-            <li><a href="productos_adm.html">Productos</a></li>
+            <li><a href="productos_adm.php">Productos</a></li>
             <li><a href="agendar_adm.html">Agendar</a></li>
 
             <li class="dropdown">
@@ -27,8 +27,8 @@
                <li><a href="rpt_vendedores_adm.html">Vendedores</a></li>
              </ul>
            </li>
-
-            <li><a href="../index.php">Cerrar Sesión</a></li>
+             <li><a href="../index.php">Cerrar Sesión</a></li>
+             <li><a><?php echo "Usuario - ". $_SESSION['usuario'] ?></a></li> 
           </ul>
         </div><!--/.nav-collapse -->
       </div>
