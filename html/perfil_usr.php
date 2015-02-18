@@ -17,7 +17,7 @@
  <!--Menu-->
     <!--<div id="menu">-->
 
-     <?php  include '../plantillas/menu_usuario.html';  ?>
+  <?php  include '../plantillas/menu_usuario.html';  ?>
 
   <div id="ctr_gen">
   <div class="container">

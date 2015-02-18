@@ -44,9 +44,25 @@
 
       <!--Lateral Izquierdo-->
       <div id="contenido">
-         <iframe width=600 height=550 border=0 src="plantillas/novedades.html" name ="detalle">
-        
-         </iframe>
+        <h2>NOVEDADES</h2>
+        <br>
+       <img class="imagenes" src="images/prod1.jpg" alt=""/>
+        <br>
+        <p><ins>Reloj Bluetooth</ins></p>
+        <p>Conectese a su celular vea Mensajes,</p>
+        <p>llamadas Entrantes y mucho mas..</p>
+        <p>Precio: 150.00</p>
+        <br>
+
+       <img class="imagenes" src="images/prod2.jpg" alt="" />
+        <br>
+        <p><ins>Sillas Ergonomicas</ins></p>
+        <p>Disfrute de la comodidad con</p>
+        <p>Estilo</p>
+        <p>Precio: 80.00</p>
+        <br>
+        <br>
+
       </div>
 
       <!--Lateral derecho-->
