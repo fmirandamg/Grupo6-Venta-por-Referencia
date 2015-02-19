@@ -10,12 +10,12 @@ class adm_referenciados
     private $ure_telf1;
     private $ure_telf2;
     private $ure_estado;
-    private $ure_fecha_reg;
+    private $ure_fecha;
     private $usr_codigo;
     
      function __construct($ure_codigo, $ure_nombres, $ure_apellidos, $ure_cedula,
                           $ure_email, $ure_telf1, $ure_telf2,
-                          $ure_estado,$ure_fecha_reg,$usr_codigo) {
+                          $ure_estado,$ure_fecha,$usr_codigo) {
        $this->ure_codigo = $ure_codigo;
        $this->ure_nombres = $ure_nombres;
        $this->ure_apellidos = $ure_apellidos;
@@ -24,7 +24,7 @@ class adm_referenciados
        $this->ure_telf1 = $ure_telf1;
        $this->ure_telf2 = $ure_telf2;
        $this->ure_estado = $ure_estado;
-       $this->ure_fecha_reg = $ure_fecha_reg;
+       $this->ure_fecha = $ure_fecha;
        $this->usr_codigo = $usr_codigo;
      }
     
@@ -76,11 +76,11 @@ class adm_referenciados
      function getEstado(){
        return $this->ure_estado;
      }
-     function setFecha($usr_fecha){
-       $this->usr_fecha = $usr_fecha;
+     function setFecha($ure_fecha){
+       $this->ure_fecha = $ure_fecha;
      } 
      function getFecha(){
-       return $this->usr_fecha;
+       return $this->ure_fecha;
      } 
      function setUsuario($usr_codigo){
        $this->usr_codigo = $usr_codigo;

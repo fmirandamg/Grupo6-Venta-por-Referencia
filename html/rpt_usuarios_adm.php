@@ -1,71 +1,21 @@
+<?php
+ session_start();  
+?>
 <!DOCTYPE HTML>
 
 <html lang = "es">
  <head>
-   <title>Venta por Referencia - Administrador</title>
-
-   <meta charset="iso-8859-1">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="author" content="Grupo 6">
-
-    <!-- Bootstrap core CSS -->
-    <link href="../css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="../css/principal.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="../css/ing_registro.css" type="text/css" media="all" />
-
-    <!-- Script bootstrap -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-
-    <!--Se añade controles para la fecha-->
-    <link rel="stylesheet" href="../css/tcal.css" type="text/css" media="all" />
-    <script src="../js/tcal.js"></script>
+   <?php  include '../plantillas/cabecera2.html';  ?>
 
  </head>
 
  <body >
    
-   <img id="bg" src="../images/fondo_2.png" alt="" />  
+   <?php  include '../plantillas/fondo2.html';  ?>   
    
   <!--Menu-->
     <!--<div id="menu">-->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand">Ventas Por Referencia</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">            
-            <li><a href="perfil_adm.html">Mi Perfil</a></li>
-            <li><a href="usuarios_adm.html">Usuarios</a></li>
-            <li><a href="productos_adm.html">Productos</a></li>
-            <li><a href="agendar_adm.html">Agendar</a></li>
-
-            <li class="dropdown">
-             <a class="dropdown-toggle" data-toggle="dropdown">
-                Reportes
-             <b class="caret"></b></a>
-   
-             <ul class="dropdown-menu">
-               <li><a href="rpt_usuarios_adm.html">Usuarios</a></li>
-               <li><a href="rpt_productos_adm.html">Productos</a></li>
-               <li><a href="rpt_vendedores_adm.html">Vendedores</a></li>
-             </ul>
-           </li>
-
-            <li><a href="../index.html">Cerrar Sesión</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+     <?php  include '../plantillas/menu_administrador.html';  ?>
 
   <div id="ctr_gen">
   <div class="container">
@@ -73,12 +23,7 @@
     <div id="Central">
 
     <!--Cabecera-->
-      <div id="cabecera">
-       <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="../images/logo_espol.gif" alt=""/>
-        <br>
-        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tú necesitas</p>
-      </div>
+      <?php  include '../plantillas/logo2.html';  ?>
 
       <!--Pantalla Criterio-->
         <!--Criterio Nombre-->
@@ -173,14 +118,7 @@
          </div>    
       <!--Fin de Tabla de Resultados-->
       <!--Footer-->
-      <div id="pie">
-         <div>
-            <a href="http://www.facebook.com"><img src="../images/facebook.jpg" alt=""/></a>            
-            <a href="http://www.twitter.com"><img src="../images/twiter.jpg" alt=""/></a>            
-            <a href="http://www.google.com"><img src="../images/googlemas.jpg" alt=""/></a>            
-         </div>
-         <p>Copyright © 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
-      </div>
+      <?php  include '../plantillas/footer2.html';  ?>
 
     </div>
    </div>

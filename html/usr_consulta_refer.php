@@ -75,6 +75,8 @@
                </tbody>
               </table>
              </div>
+            <br><br>       
+           <div><a href="referenciado_usr.php">Regresar</a>  </br> </br> </div>
       </div>    
           
      <!--Fin divisón central-->
