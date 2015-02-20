@@ -86,23 +86,34 @@
 
       </div>
 
-      <!--Lateral derecho
       <div class="lateral">
           <div class="ingreso">
-            <br>
-           <img class="imgusr" src="../images/foto_usuario.jpg"  alt=""/> 
-   
-           <form method="post" action="carga_img">
+            
+             <div class="contimgper">
+
+               <?php
+                if ($Objusuario->getFoto() == "") {
+                  echo "<img class='imgusr2' src='../images/foto_usuario.jpg'  alt=''/>";
+                }else {
+                  echo  "<img class='imgusr2' src='../images/".$Objusuario->getFoto()."'  alt=''/>" ;
+                }
+               
+              ?>
+
+           </div>
+
+           <form enctype="multipart/form-data" method="post" action="carga_adm_img.php">
+              <br>
+              <input name="uploadedfile" type="file"  > 
               <br>
               <input type="submit" value="Cargar Imagen" class="boton" />
               <br>             
-           </form>
+           </form> 
 
           </div>
       </div>
-      -->
 
-     <!--Fin divisón central-->
+     
       <!--Footer-->
       <?php  include '../plantillas/footer2.html';  ?>
 

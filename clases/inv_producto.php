@@ -11,9 +11,10 @@ class inv_producto
     private $prod_estado;
     private $prod_val_costo;
     private $usr_codigo;
+    private $prod_foto;
     
      function __construct($prod_codigo, $prod_descripcion, $prod_detalle, $prod_cantidad, 
-                          $prod_valor_vta, $prod_valor_comis, $prod_estado, $prod_val_costo, $usr_codigo ) {
+                          $prod_valor_vta, $prod_valor_comis, $prod_estado, $prod_val_costo, $usr_codigo,$prod_foto) {
        $this->prod_codigo = $prod_codigo;
        $this->prod_descripcion = $prod_descripcion;
        $this->prod_detalle = $prod_detalle;
@@ -23,6 +24,7 @@ class inv_producto
        $this->prod_estado = $prod_estado;
        $this->prod_val_costo = $prod_val_costo;
        $this->usr_codigo = $usr_codigo;
+       $this->prod_foto = $prod_foto;
      }
     
      function setProd_codigo($prod_codigo){
@@ -78,6 +80,12 @@ class inv_producto
      } 
      function getUsuario(){
        return $this->usr_codigo;
+     } 
+     function setfoto($prod_foto){
+       $this->prod_foto = $prod_foto;
+     } 
+     function getfoto(){
+       return $this->prod_foto;
      } 
      
 }

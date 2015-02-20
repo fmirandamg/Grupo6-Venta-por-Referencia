@@ -122,6 +122,14 @@ class SegUsrCollector extends Collector
                                              $id));
   }  
 
+  function updatefoto($id,$foto) {    
+    $insertrow = self::$db->updateRow("UPDATE venta_refer.seg_usuario  
+                                          SET seg_usuario.USR_FOTO = ?
+                                        WHERE seg_usuario.USR_CODIGO = ? ", 
+                                        array( "{$foto}",
+                                             $id));
+  }  
+
   function deleteusuario($id) {    
     $deleterow = self::$db->deleteRow("DELETE FROM venta_refer.seg_usuario WHERE USR_CODIGO= ?", array("{$id}"));
   }  

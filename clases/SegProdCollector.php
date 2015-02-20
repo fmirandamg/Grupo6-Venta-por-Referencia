@@ -10,7 +10,7 @@ class SegProdCollector extends Collector
     $row = self::$db->getRows("SELECT * FROM venta_refer.inv_producto where PROD_CODIGO = ? ", array("{$id}")); 
     $Objproducto = new inv_producto($row[0]{'PROD_CODIGO'},$row[0]{'PROD_DESCRIPCION'},$row[0]{'PROD_DETALLE'},
                                   $row[0]{'PROD_CANTIDAD'},$row[0]{'PROD_VALOR_VTA'},$row[0]{'PROD_VALOR_COMIS'},
-                                  $row[0]{'PROD_ESTADO'},$row[0]{'PROD_VAL_COSTO'},$row[0]{'USR_CODIGO'}
+                                  $row[0]{'PROD_ESTADO'},$row[0]{'PROD_VAL_COSTO'},$row[0]{'USR_CODIGO'},$row[0]{'PROD_FOTO'}
                                   );
     return $Objproducto;
   }
@@ -32,7 +32,7 @@ class SegProdCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM venta_refer.inv_producto ");        
     $arrayproducto= array();        
     foreach ($rows as $c){
-      $aux = new inv_producto($c{'PROD_CODIGO'},$c{'PROD_DESCRIPCION'},"","","","","","","");
+      $aux = new inv_producto($c{'PROD_CODIGO'},$c{'PROD_DESCRIPCION'},"","","","","","","","");
       array_push($arrayproducto, $aux);
     }
     return $arrayproducto;        
@@ -42,7 +42,7 @@ class SegProdCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM venta_refer.inv_producto where PROD_CODIGO like  ?", array("%{$codigo}%"));        
     $arrayproducto= array();        
     foreach ($rows as $c){
-      $aux = new inv_producto($c{'PROD_CODIGO'},$c{'PROD_DESCRIPCION'},"","","","","","","");
+      $aux = new inv_producto($c{'PROD_CODIGO'},$c{'PROD_DESCRIPCION'},"","","","","","","","");
       array_push($arrayproducto, $aux);
     }
     return $arrayproducto;        
@@ -52,7 +52,7 @@ class SegProdCollector extends Collector
     $rows = self::$db->getRows("SELECT * FROM venta_refer.inv_producto where PROD_DESCRIPCION like ?", array("%{$descrip}%"));        
     $arrayproducto= array();        
     foreach ($rows as $c){
-      $aux = new inv_producto($c{'PROD_CODIGO'},$c{'PROD_DESCRIPCION'},"","","","","","","");
+      $aux = new inv_producto($c{'PROD_CODIGO'},$c{'PROD_DESCRIPCION'},"","","","","","","","");
       array_push($arrayproducto, $aux);
     }
     return $arrayproducto;        
@@ -74,6 +74,14 @@ class SegProdCollector extends Collector
                                                "{$prod_valor_vta}","{$prod_valor_comis}","{$prod_estado}",
                                                "{$prod_val_costo}","{$usr_codigo}",
                                              $prod_codigo));
+  }  
+
+  function updatefoto($id,$foto) {    
+    $insertrow = self::$db->updateRow("UPDATE venta_refer.inv_producto  
+                                          SET inv_producto.PROD_FOTO = ?
+                                        WHERE inv_producto.PROD_CODIGO = ? ", 
+                                        array( "{$foto}",
+                                             $id));
   }  
 
   function deleteProducto($id) {    

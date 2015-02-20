@@ -1,10 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 4.1.12
--- http://www.phpmyadmin.net
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 18-02-2015 a las 06:35:43
--- Versión del servidor: 5.6.16
+﻿Versión del servidor: 5.6.16
 -- Versión de PHP: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
@@ -58,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `adm_referenciados` (
   `USR_CODIGO` int(11) NOT NULL,
   PRIMARY KEY (`URE_CODIGO`),
   KEY `USR_CODIGO` (`USR_CODIGO`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Volcado de datos para la tabla `adm_referenciados`
@@ -67,7 +61,8 @@ CREATE TABLE IF NOT EXISTS `adm_referenciados` (
 INSERT INTO `adm_referenciados` (`URE_CODIGO`, `URE_NOMBRES`, `URE_APELLIDOS`, `URE_CEDULA`, `URE_EMAIL`, `URE_TELF1`, `URE_TELF2`, `URE_ESTADO`, `URE_FECHA_REG`, `USR_CODIGO`) VALUES
 (3, 'PEDRO MARIA', 'HERNANDEZ POSORJA', '5465156465', 'usuario@correo.com', '2218031', '0990990010', 'A', '2015-02-17', 25),
 (4, 'REFERIDO RAUL', 'APELLIDO RFERIDO22', '4544186456', '', '', '', 'A', '2015-02-18', 26),
-(5, 'CALUDIO PILL', 'MIRAFLORES', '0965785422', 'prodfg@gmail.com', '0996587441', '', 'A', '2015-02-18', 26);
+(5, 'CALUDIO PILL', 'MIRAFLORES', '0965785422', 'prodfg@gmail.com', '0996587441', '', 'A', '2015-02-18', 26),
+(6, 'MAURO ERICK', 'ALVAREZ MEJIA', '0936543525', 'mail@correo.com', '9866546546', '', 'A', '2015-02-18', 25);
 
 -- --------------------------------------------------------
 
@@ -117,22 +112,24 @@ CREATE TABLE IF NOT EXISTS `inv_producto` (
   `PROD_ESTADO` char(1) NOT NULL,
   `PROD_VAL_COSTO` decimal(10,2) NOT NULL,
   `USR_CODIGO` int(11) DEFAULT NULL,
+  `PROD_FOTO` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`PROD_CODIGO`),
   KEY `USR_CODIGO` (`USR_CODIGO`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
 
 --
 -- Volcado de datos para la tabla `inv_producto`
 --
 
-INSERT INTO `inv_producto` (`PROD_CODIGO`, `PROD_DESCRIPCION`, `PROD_DETALLE`, `PROD_CANTIDAD`, `PROD_VALOR_VTA`, `PROD_VALOR_COMIS`, `PROD_ESTADO`, `PROD_VAL_COSTO`, `USR_CODIGO`) VALUES
-(1, 'SILLAS DE CASA JARDIN', '   LAS SILLAS MAS MODERNAS PARA EL HOHAR DE HOY Y DE TODOS LOS DIAS', 115, '120.32', '10.20', 'A', '99.32', 2),
-(2, 'COSAS DE CASA HOGAREÑAS', ' ', 100, '12.58', '1.88', 'A', '10.58', 2),
-(3, 'PRODUCTO DE MESA', ' UN PRODUCTO DE MESA PENSADO PARA EL HOGAR QUE PERMITE TENER UNA VARIEDAD DE COSAS POR USAR', 5, '5.35', '2.00', 'A', '1.35', 2),
-(4, 'COSITAS', ' NUEVAS COSITAS', 500, '1.00', '1.00', 'A', '1.00', 25),
-(5, 'SABANAS BLANCAS', 'NUEVAS BLANCAS', 10, '12.30', '1.25', 'A', '10.32', 2),
-(6, 'SABANAS AZULES', ' ', 25, '14.20', '2.32', 'A', '9.52', 2),
-(8, 'PRODUCTO NUEVO', ' ', 5, '4.32', '1.32', 'A', '2.35', 2);
+INSERT INTO `inv_producto` (`PROD_CODIGO`, `PROD_DESCRIPCION`, `PROD_DETALLE`, `PROD_CANTIDAD`, `PROD_VALOR_VTA`, `PROD_VALOR_COMIS`, `PROD_ESTADO`, `PROD_VAL_COSTO`, `USR_CODIGO`, `PROD_FOTO`) VALUES
+(1, 'SILLAS DE CASA JARDIN', '   LAS SILLAS MAS MODERNAS PARA EL HOHAR DE HOY Y DE TODOS LOS DIAS', 115, '120.32', '10.20', 'A', '99.32', 2, NULL),
+(2, 'COSAS DE CASA HOGAREÑAS', ' ', 100, '12.58', '1.88', 'A', '10.58', 2, 'sabanas.png'),
+(3, 'PRODUCTO DE MESA', ' UN PRODUCTO DE MESA PENSADO PARA EL HOGAR QUE PERMITE TENER UNA VARIEDAD DE COSAS POR USAR', 5, '5.35', '2.00', 'A', '1.35', 2, NULL),
+(4, 'COSITAS', ' NUEVAS COSITAS', 500, '1.00', '1.00', 'A', '1.00', 25, NULL),
+(5, 'SABANAS BLANCAS', 'NUEVAS BLANCAS', 10, '12.30', '1.25', 'A', '10.32', 2, 'sabanas.png'),
+(6, 'SABANAS AZULES', ' ', 25, '14.20', '2.32', 'A', '9.52', 2, NULL),
+(8, 'PRODUCTO NUEVO', ' ', 5, '4.32', '1.32', 'A', '2.35', 2, NULL),
+(9, 'MESAS DE HOGAR', ' MESAS DEL HOGAR', 25, '15.32', '12.00', 'A', '11.25', 2, 'mesas.png');
 
 -- --------------------------------------------------------
 
@@ -199,9 +196,9 @@ CREATE TABLE IF NOT EXISTS `seg_usuario` (
 --
 
 INSERT INTO `seg_usuario` (`USR_CODIGO`, `USR_NOMBRES`, `USR_APELLIDOS`, `USR_CEDULA`, `USR_FECHA`, `USR_ESTADO`, `USR_ULT_ACCESO`, `TIP_CODIGO`, `USR_USUARIO`, `USR_PASSWORD`, `USR_EMAIL`, `USR_FOTO`, `USR_TEL1`, `USR_TEL2`) VALUES
-(2, 'FRANCISCO RAUL', 'MIRANDA GARCIA', '0918360756', '2015-02-12', 'A', NULL, 'ADM', 'fmiranda', '123', 'francisco.raul.mg@gmail.com', '', '2218031', '0997089591'),
-(25, 'KARINA CECILIA', 'GUADALUPE CARRIEL', '0998562312', '2015-02-12', 'A', NULL, 'USR', 'kari', '123', 'kari@hotmail.com', '', '2222222', '0990990010'),
-(26, 'RAUL ALBERTO', 'GUADALUPE CARRIEL', '0979879454', '2015-02-12', 'A', NULL, 'USR', 'raul', '123', '', '', '2222222', ''),
+(2, 'FRANCISCO RAUL', 'MIRANDA GARCIA', '0918360756', '2015-02-12', 'A', NULL, 'ADM', 'fmiranda', '123', 'francisco.raul.mg@gmail.com', 'perfil_adm.png', '2218031', '0997089591'),
+(25, 'KARINA CECILIA', 'GUADALUPE CARRIEL', '0998562312', '2015-02-12', 'A', NULL, 'USR', 'kari', '123', 'kari@hotmail.com', 'kari.png', '2222222', '0990990010'),
+(26, 'RAUL ALBERTO', 'GUADALUPE CARRIEL', '0979879454', '2015-02-12', 'A', NULL, 'USR', 'raul', '123', '', 'Raul_al.png', '2222222', ''),
 (27, 'FLORA DEL ROCIO', 'GARCIA FUENTES', '0999999999', '0000-00-00', 'A', NULL, 'USR', 'rocio', '123', '', '', '', ''),
 (28, 'JUAN FRANCISCO', 'MIRANDA JIMENEZ', '0999999512', '0000-00-00', 'A', NULL, 'USR', 'juan', '123', '', '', '', ''),
 (29, 'ADRIAN DAVID', 'MIRANDA GUADALUPE', '0999995874', '0000-00-00', 'A', NULL, 'USR', 'adrian', '1234', '', '', '', '');

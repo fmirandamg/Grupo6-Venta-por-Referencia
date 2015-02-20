@@ -72,24 +72,35 @@
             <br><br>
          </form> 
       </div>
-
-        <!--
-
+     
       <div class="lateral">
-         
           <div class="ingreso">
-            <br>
-           <img class="imgusr" src="../images/cuadro_blanco.png" alt="" /> 
-   
-           <form method="post" action="carga_img">
+            
+             <div class="contimgper">
+
+               <?php
+                if ($Objproducto->getFoto() == "") {
+                  echo "<img class='imgusr2' src='../images/foto_usuario.jpg'  alt=''/>";
+                }else {
+                  echo  "<img class='imgusr2' src='../images/".$Objproducto->getFoto()."'  alt=''/>" ;
+                }
+               
+              ?>
+
+           </div>
+
+           <form enctype="multipart/form-data" method="post" action="carga_prod_img.php">
+              <input type="hidden" class="cod" name="codigo2" value="<?php echo $Objproducto->getProd_codigo(); ?>" readonly/>
+              <br>
+              <input name="uploadedfile" type="file"  > 
               <br>
               <input type="submit" value="Cargar Imagen" class="boton" />
               <br>             
-           </form>
+           </form> 
 
           </div>
       </div>
-     -->
+       
      <!--Fin divisón central-->
       <!--Footer-->
       <?php  include '../plantillas/footer2.html';  ?>
