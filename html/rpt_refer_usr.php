@@ -28,74 +28,71 @@
 
       <!--Pantalla Criterio-->
         <!--Criterio Nombre-->
-        <div id="Buscador">
-         <h3>Consulta de Referenciados</h3>
-         <h4>Criterio de Nombres</h4>
-         <form method="post" action="buscar_nom">
-            <select>
-              <option value="tod">Todos</option>
-              <option value="Cedula">Cedula</option>
-              <option value="Nombres">Nombres</option>
-              <option value="Apellidos">Apellidos</option>
-            </select>
-            <input type="text" name="buscar" class="buscar" />
-         </form>
+     <?php 
+      $usuario=$_SESSION['codigo'];
+      include_once("../clases/SegRefCollector.php");
 
-        </div>
-        <!--Rango de Fechas-->
-         <div id="rep_fecha">
-           <form method="post" action="Buscar_res">
-            <br>
-            <label id="labtel1">Fecha Desde</label>
-            <label id="labtel2">Fecha Hasta</label>
-            <br>
-            <input type="text" class="tcal" name="fechaD" value="" />
-            <input type="text" class="tcal" name="fechaH" value="" />
-            <br>
-            <input type="submit" value="Buscar" class="boton">
-           </form>
-        </div>
-        <br><br><br><br><br>
-      <!--Fin Campos de Criterio-->
-      <!--Tabla de Resultados-->
-        <div id="repor_cont">
-          <table class="tblbuscar" >
-               <caption> <strong> Resultado de la Busqueda</strong> </caption>
+      $referObj = new SegRefCollector();
+      $objreferencia = $referObj->showReferProd($usuario);
+      ?>
+      <h3>Consulta de Referidos a Productos</h3>
+      <div id="repor_convnd">
+        <?php
+          foreach ($objreferencia as $objreferencia2){
+          include_once("../clases/SegProdCollector.php");
+          $prod_CollectObj = new SegProdCollector();
+          $Objproducto = $prod_CollectObj->showProducto($objreferencia2->getRef_secuencia());
+          echo "<h4>". $objreferencia2->getRef_secuencia()." - ".$Objproducto->getDescripcion()."</h4>"."<br>";  
+          echo "<table class='tblbuscar'>";
+          echo "
+              <thead >
+                  <tr >
+                     <th class='tbl_cod'>Codigo</th>
+                     <th class='tbl_nombre'>Nombres</th>
+                     <th >Cedula</th>
+                  </tr>
+               </thead>
+                ";
+          echo "</table>";
+          
+          $objureprod = $referObj->showReferUsrProd($usuario,$objreferencia2->getRef_secuencia());
+          echo "<div class='d_tabl_result2'>
+                  <table class='tblbusdet' >
+                   <tbody>";
+
+          foreach ($objureprod as $objureprod2){
+            include_once("../clases/SegUreCollector.php");
+            $ure_CollectObj = new SegUreCollector();
+            $Objrefer = $ure_CollectObj->showReferenciado($objureprod2->getRef_secuencia());
+            
+            echo "<tr>";
+            echo "<td class='tbl_cod'>".$Objrefer->getIdUre() ."</td>";
+            echo "<td class='tbl_nombre'>".$Objrefer->getNombre()." ".$Objrefer->getApellido()."</td>";
+            echo "<td>".$Objrefer->getCedula()."</td>";
+            echo "</tr>"; 
+          }
+          echo "</tbody>
+              </table>
+             </div>";
+
+          }
+        ?> 
+         <!--Busqueda-
+        <table class="tblbuscar" >
+              <caption> <strong> Resultado de la Busqueda</strong> </caption>
                <thead >
                   <tr >
-                     <th class="tbl_cod_rep" >Código</th>
-                     <th class="tbl_nombre_rep" >Nombres</th>
-                     <th class="tbl_cedula_rep" >Cedula</th>
-                     <th  >Fechas</th>
+                     <th class="tbl_cod">Código</th>
+                     <th class="tbl_nombre">Nombres</th>
+                     <th >Cedula</th>
                   </tr>
                </thead>
              </table>
+           -->
 
-             <div id="d_tabrep">
-              <table class="tblbusdet" >
-               <tbody>
-                 <tr>
-                   <td class="tbl_cod_rep">1</td>
-                   <td class="tbl_nombre_rep">FRANCISCO RAUL MIRANDA GARCIA</td>
-                   <td class="tbl_cedula_rep">0918360798</td>
-                   <td >01/01/2015</td>
-                 </tr>
-                 <tr>
-                   <td >2</td>
-                   <td >KARINA CECILIA GUADALUPE CARRIEL</td>
-                   <td >0918360798</td>
-                   <td >01/01/2015</td>
-                 </tr>
-                 <tr>
-                   <td >2</td>
-                   <td >KARINA CECILIA GUADALUPE CARRIEL</td>
-                   <td >0918360798</td>
-                   <td >01/01/2015</td>
-                 </tr>             
-               </tbody>
-              </table>
-             </div>
-         </div>
+            <br><br>
+      </div>   
+      <br><br><br><br>
       <!--Fin de Tabla de Resultados-->
       <!--Footer-->
       <?php  include '../plantillas/footer2.html';  ?>

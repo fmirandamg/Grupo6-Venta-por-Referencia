@@ -44,7 +44,7 @@
       </div>
       
       <div id="formulario">
-        <form method="post" action="registro_usr.php">
+        <form method="post" action="nuevo_usr.php">
             <input type="submit" value="Nuevo Usuario" class="boton">
          </form> 
          <br><br>

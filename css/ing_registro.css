@@ -57,6 +57,13 @@ input{
   float: left;
   /*margin-left:2%;*/
 }
+.Buscador3{
+  text-align: left;
+  width: 95%;
+  line-height: 1;
+  float: left;
+  margin-left: 20px;
+}
 
 #repor_cont{
   text-align: left;
@@ -97,7 +104,11 @@ input{
   height: 300px;
   width: 89%; 
 }
-
+.d_tabl_result2{
+  overflow-y:auto;
+  height: 100px;
+  width: 89%; 
+}
 #d_tabrep{
   overflow-y:auto;
   height: 400px;
@@ -197,7 +208,7 @@ input{
   width: 97%;
   margin-left: 10px;
 }
-
+ 
 /**/
 /*******************/
 /*************************/

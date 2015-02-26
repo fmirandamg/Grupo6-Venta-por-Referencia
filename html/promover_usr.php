@@ -26,123 +26,44 @@
     <!--Cabecera-->
        <?php  include '../plantillas/logo2.html';  ?>
 
-      <!--Productos-->
-      <div class="Buscador2">
-        <h3>Lista de Productos</h3>
-        <h4>Buscar</h4>
-         <form method="post" action="bus_prod">
-            <select>
-              <option value="Codigo">Código</option>
-              <option value="Nombres">Descripción</option>
-            </select>
-            <input type="text" name="buscar" class="buscar" />
-            <input type="submit" value="Buscar" class="boton">
-         </form>
+      <?php
+        include_once("../clases/SegProdCollector.php");
+        $productoObj = new SegProdCollector();
+        $objprod = $productoObj->readProductos(); 
+      ?>
 
-
-            <table class="tblbuscar" >
-               <caption> <strong> Resultado de la Busqueda</strong> </caption>
+      <!--Busqueda-->
+      <div id="repor_convnd">
+        <table class="tblbuscar" >
+               <caption> <strong> Seleccione Producto a Promover</strong> </caption>
                <thead >
                   <tr >
-                     <th class="tbl_cod" >Código</th>
-                     <th  >Descripción</th>
+                     <th class="tbl_cod" >C&oacutedigo</th>
+                     <th  >Descripci&oacuten</th>
                   </tr>
                </thead>
-             </table>
+             </table> 
 
-             <div class="d_tabla">
+             <div class="d_tabl_result">
               <table class="tblbusdet" >
                <tbody>
-                 <tr>
-                   <td class="tbl_cod"><a href="#">1</a></td>
-                   <td >RELOJ BLUETOOTH</td>
-                 </tr>
-                 <tr>
-                   <td ><a href="#">2</a></td>
-                   <td >SILLAS ERGONÓMICAS</td>
-                 </tr>
-
+                 <?php
+                 foreach ($objprod as $objprod2){
+                  echo "<tr>";
+                  echo "<td class='tbl_cod'>".$objprod2->getProd_codigo() ."</td>";
+                  echo "<td class='tbl_nombre'>".$objprod2->getDescripcion()."</td>";
+                  echo "<td><a href='reg_referencia.php?id=".$objprod2->getProd_codigo()."'>Seleccionar</a></td>";
+                  echo "</tr>"; 
+                 }
+                ?> 
+                 
                </tbody>
               </table>
              </div>
-         </div>
+            <br><br>
+      </div>   
+      <br><br><br><br>
 
-         <!--Imnagen de Referidos-->
-      <div class="lateral">
-          <div class="ingreso">
-            <br>
-           <img class="imgusr" src="../images/prod1.jpg"  alt="" />
-
-           <form method="post" action="dato_prod">
-              <br>
-              <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> RELOJ BLUETOOTH </textarea>
-              <br> <br>
-           </form>
-
-          </div>
-      </div>
-      <!--Referidos-->
-      <div class="Buscador2">
-        <h3>Lista de Referidos</h3>
-        <h4>Buscar</h4>
-         <form method="post" action="cons_refer">
-            <select>
-              <option value="Cedula">Cedula</option>
-              <option value="Nombres">Nombres</option>
-              <option value="Apellidos">Apellidos</option>
-            </select>
-            <input type="text" name="buscar" class="buscar" />
-            <input type="submit" value="Buscar" class="boton">
-         </form>
-
-
-            <table class="tblbuscar" >
-               <caption> <strong> Resultado de la Busqueda</strong> </caption>
-               <thead >
-                  <tr >
-                     <th class="tbl_cod">Código</th>
-                     <th class="tbl_nombre">Nombres</th>
-                     <th >Cedula</th>
-                  </tr>
-               </thead>
-             </table>
-
-             <div class="d_tabla">
-              <table class="tblbusdet" >
-               <tbody>
-                 <tr>
-                   <td class="tbl_cod"><a href="#">1</a></td>
-                   <td class="tbl_nombre">JOSE MIGUEL CARRASCO SANCHEZ</td>
-                   <td >0918360951</td>
-                 </tr>
-                 <tr>
-                   <td ><a href="#">2</a></td>
-                   <td >MARIA CRISTINA GALARZA MARIN</td>
-                   <td >0918360473</td>
-                 </tr>
-
-               </tbody>
-              </table>
-             </div>
-          <form method="post" action="prom_art">
-            <input type="submit" name="promover" value="Promover" class="boton">
-         </form>
-         </div>
-
-         <!--Imnagen de Referidos-->
-      <div class="lateral">
-          <div class="ingreso">
-            <br>
-           <img class="imgusr" src="../images/foto_usuario.jpg"  alt="" />
-
-           <form method="post" action="Cons_Referido">
-              <br>
-              <textarea rows="2" cols="20" class="det_nombres" name="nombres" readonly> JOSE MIGUEL CARRASCO SANCHEZ </textarea>
-              <br> <br>
-           </form>
-
-          </div>
-      </div>
       <!--Footer-->
       <?php  include '../plantillas/footer2.html';  ?>
 

@@ -29,7 +29,21 @@ class SegUreCollector extends Collector
   }  
 
   function readReferenciados($usr_codigo) {
-    $rows = self::$db->getRows("SELECT * FROM venta_refer.adm_referenciados USR_CODIGO = ?", array("{$usr_codigo}"));        
+    $rows = self::$db->getRows("SELECT * FROM venta_refer.adm_referenciados where USR_CODIGO = ?", array("{$usr_codigo}"));        
+    $arrayRefere= array();        
+    foreach ($rows as $c){
+      $aux = new adm_referenciados($c{'URE_CODIGO'},$c{'URE_NOMBRES'},$c{'URE_APELLIDOS'},$c{'URE_CEDULA'},
+                                    "","","","","","");
+      array_push($arrayRefere, $aux);
+    }
+    return $arrayRefere;        
+  }
+
+   function readReferenciados_prod($usr_codigo, $cod_producto) {
+    $rows = self::$db->getRows("SELECT * FROM venta_refer.adm_referenciados where USR_CODIGO = ?
+                                and URE_CODIGO not in (select URE_CODIGO from venta_refer.adm_referencia
+                                where URE_CODIGO = adm_referenciados.URE_CODIGO and PROD_CODIGO = ?) ", 
+                                array("{$usr_codigo}","{$cod_producto}"));        
     $arrayRefere= array();        
     foreach ($rows as $c){
       $aux = new adm_referenciados($c{'URE_CODIGO'},$c{'URE_NOMBRES'},$c{'URE_APELLIDOS'},$c{'URE_CEDULA'},
