@@ -37,16 +37,17 @@
       $uploadedfileload="true";
       $uploadedfile_size=$_FILES['uploadedfile']['size'];
       echo $_FILES['uploadedfile']['name'];
+      //echo $_FILES['uploadedfile']['tmp_name'];
       if ($_FILES['uploadedfile']['size']>200000)
       {$msg=$msg."El archivo es mayor que 200KB, debes reduzcirlo antes de subirlo </br>";
       $uploadedfileload="false";}
 
-      if (!($_FILES['uploadedfile']['type'] =="image/pjpeg" OR $_FILES['uploadedfile']['type'] =="image/gif" OR $_FILES['uploadedfile']['type'] =="image/png"))
+      if (!($_FILES['uploadedfile']['type'] =="image/jpeg" OR $_FILES['uploadedfile']['type'] =="image/jpg" OR $_FILES['uploadedfile']['type'] =="image/gif" OR $_FILES['uploadedfile']['type'] =="image/png"))
       {$msg=$msg." Tu archivo tiene que ser JPG o GIF. Otros archivos no son permitidos </br>";
       $uploadedfileload="false";}
 
       $file_name=$_FILES['uploadedfile']['name'];
-      $add="../images/$file_name";
+      $add="../images/profiles/$file_name";
       if($uploadedfileload=="true"){
 
       if(move_uploaded_file ($_FILES['uploadedfile']['tmp_name'], $add)){
@@ -55,7 +56,7 @@
 
       }else{echo $msg;}
 
-      echo  "<div class='contimgper'><img class='imgusr2' src='../images/".$_FILES['uploadedfile']['name']."'  alt=''/> </div>" ;
+      echo  "<div class='contimgper'><img class='imgusr2' src='../images/profiles/".$_FILES['uploadedfile']['name']."'  alt=''/> </div>" ;
 
       ?>
 

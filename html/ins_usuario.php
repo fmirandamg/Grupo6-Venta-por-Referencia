@@ -40,14 +40,24 @@
           $usuario=$_POST["usr"];
           $password=$_POST["psw"];
           $mail=$_POST["mail"];
-          $foto="";
+          $foto=$_FILES["foto"]["name"];
+	  //$foto="";
           $tel1=$_POST["tel1"];
           $tel2=$_POST["tel2"];
+	  //$rutaServidor="../images/profiles";
+	  $rutaTemporal=$_FILES['foto']['tmp_name'];
+	 // $imagen=$_FILES['foto']['name'];
+	  //$rutaDestino="../images/profiles/".$foto;
+	    $rutaDestino="/home/hchimbo/Escritorio/".$foto;
+	  //echo $nombres $apellidos;
+	  move_uploaded_file($rutaTemporal,$rutaDestino);
+
+
           /* 
           $fecha=str_replace("/","-",$fecha); 
           $fecha=date("Y-m-d",  strtotime($fecha));
           */
-
+	  
           include_once("../clases/SegUsrCollector.php");
 
           $usuarioObj = new SegUsrCollector();
@@ -65,6 +75,8 @@
           echo "<B> Usuario: </B>" . htmlspecialchars($usuario) . "<br><br>";
 
           echo "<B> Registro Grabado Exitosamente </B> </br></br>";
+          echo "<B> Ruta: </B>" . htmlspecialchars($rutaDestino) ."<br><br>";
+	  echo  $_FILES['foto']['name'];
           ?>
           
            <div><a href="../index.php">Volver al Inicio</a>  </br> </br> </div>

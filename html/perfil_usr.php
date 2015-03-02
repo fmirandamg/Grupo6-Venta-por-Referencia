@@ -94,9 +94,9 @@
 
                <?php
                 if ($Objusuario->getFoto() == "") {
-                  echo "<img class='imgusr2' src='../images/foto_usuario.jpg' alt=''/>";
+                  echo "<img class='imgusr2' src='../images/profiles/foto_usuario.jpg' alt=''/>";
                 }else {
-                  echo  "<img class='imgusr2' src='../images/".$Objusuario->getFoto()."' alt=''/>" ;
+                  echo  "<img class='imgusr2' src='../images/profiles/".$Objusuario->getFoto()."' alt=''/>" ;
                 }
                
               ?>

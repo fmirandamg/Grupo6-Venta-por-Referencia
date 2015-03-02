@@ -46,7 +46,7 @@
       <div id="contenido">
         <h2>NOVEDADES</h2>
         <br>
-       <img class="imagenes" src="images/prod1.jpg" alt=""/>
+       <img class="imagenes" src="images/products/prod1.jpg" alt=""/>
         <br>
         <p><ins>Reloj Bluetooth</ins></p>
         <p>Conectese a su celular vea Mensajes,</p>
@@ -54,7 +54,7 @@
         <p>Precio: 150.00</p>
         <br>
 
-       <img class="imagenes" src="images/prod2.jpg" alt="" />
+       <img class="imagenes" src="images/products/prod2.jpg" alt="" />
         <br>
         <p><ins>Sillas Ergonomicas</ins></p>
         <p>Disfrute de la comodidad con</p>

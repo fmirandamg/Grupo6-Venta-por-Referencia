@@ -1,4 +1,5 @@
 <?php
+ header('Content-Type: text/html; charset=UTF-8');
  session_start();  
 ?>
 <!DOCTYPE HTML>
@@ -32,7 +33,7 @@
       <div id="formulario">
         <h3>Registro Usuario</h3>
         <br>
-         <form method="post" action="ins_usuario.php">
+         <form enctype="multipart/form-data" method="post" action="ins_usuario.php">
             <label>Nombres</label>
             <br>
             <input type="text" class="nomape" name="nombre" value="" autofocus="autofocus" maxlength="30" required/>
@@ -40,6 +41,10 @@
             <label>Apellidos</label>
             <br>
             <input type="text" class="nomape" name="apellido" value="" maxlength="30" required/>
+            <br><br>
+	    <label>¿Quién eres ?</label>
+            <br>
+            <input name="foto" type="file" >
             <br><br>
             <label>Cedula</label>
             <br>
