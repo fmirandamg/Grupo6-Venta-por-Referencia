@@ -1,67 +1,24 @@
+<?php
+ $visita = isset($_COOKIE['visita']) ? $_COOKIE['visita'] : "Primera vez";
+ $visita_actual = date("c");
+ setcookie('visita',$visita_actual,(time()+60*60*24*30));
+ session_start();  
+?>
+
 <!DOCTYPE HTML>
 
 <html lang = "es">
  <head>
-   <title>Venta por Referencia</title>
-
-   <meta charset="iso-8859-1">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <meta name="author" content="Grupo 6">
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/principal.css" type="text/css" media="all" />
-
-    <!-- Script bootstrap -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+   <?php  include 'plantillas/cabecera.html';  ?>
 
  </head>
 
  <body >
 
-   <img id="bg" src="images/fondo_2.png" alt="" />
-
-
+    <?php  include 'plantillas/fondo.html';  ?>
 <!--Menu-->
       <!--<a class="navbar-brand" href="#">Ventas Por Referencia</a>-->
-
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand">Ventas Por Referencia</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="html/empresa.html">Nuestra Empresa</a></li>
-            <li><a href="html/negocio.html">El Negocio</a></li>
-            <li><a href="html/pregunta.html">Preguntas Frecuentes</a></li>
-            <li class="dropdown">
-
-             <a class="dropdown-toggle" data-toggle="dropdown">
-                Modulos
-             <b class="caret"></b></a>
-
-             <ul class="dropdown-menu">
-               <li><a href="html/perfil_usr.html">Usuario</a></li>
-               <li><a href="html/perfil_adm.html">Administrador</a></li>
-               <li><a href="html/perfil_vnd.html">Vendedor</a></li>
-             </ul>
-
-           </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    <?php  include 'plantillas/menu_principal.html';  ?>
 
       <!-- </div> -->
 
@@ -72,12 +29,18 @@
 
     <div id="Central">
     <!--Cabecera-->
-      <div id="cabecera">
-       <p id="Tit1">Ventas por Referencia</p>
-        <img id="logo" src="images/logo_espol.gif" alt="" />
-        <br>
-        <p id="Tit2">Gana comisiones Referenciando a tus amigos <br> Tenemos lo que tu necesitas</p>
-      </div>
+       <?php  include 'plantillas/logo.html';  ?>
+      
+       <?php
+       if (isset($_SESSION['usuario'])) {
+          session_destroy();
+        }
+       
+       if (isset($_CODIGO['codigo'])) {
+          session_destroy();
+        }
+
+       ?> 
 
       <!--Lateral Izquierdo-->
       <div id="contenido">
@@ -107,14 +70,14 @@
           <!--Ingreso sign In-->
           <div class="ingreso">
             <br>
-	    <form method="post" action="Ing_sesion">
+	    <form method="post" action="html/ing_sesion.php">
                <input type="text" id="usuario" name="user" value="" placeholder="Usuario" required="required" autofocus="autofocus" />
                 <br><br>
-               <input type="password" id="password" name="psw" placeholder="Password">
+               <input type="password" id="password" name="passw" placeholder="Password">
                 <br>
                <input type="submit" value="Ingresar" class="boton" />
 		           <br>
-               <a href="html/registro_usr.html"><ins>Registrate</ins></a>
+               <a href="html/registro_usr.php"><ins>Registrate</ins></a>
             </form>
             <br>
           </div>
@@ -122,13 +85,13 @@
           <!--Noticias-->
           <div id="noticias">
             <h4><b><ins>Ultimas Noticias</ins></b></h4>
-            <p><b>Debil aumento de las ventas en el mercado espanol del arte</b></p>
+             <p><b>D&eacutebil aumento de las ventas en el mercado espa&ntildeol del arte</b></p>
 	    <p>
-              El presidente de la Fundacion Arte y Mecenazgo (impulsada por 'la Caixa'),
-              Leopoldo Rodes; la directora de la Fundacion Arte y Mecenazgo, Mercedes Basso; y la autora del informe,
-              Clare McAndrew, fundadora y directora general de Arts Economics, han presentado El mercado espanol del
-              arte en 2014 en el que el sector presenta, por tercer consecutivo, un crecimiento positivo del 3%,
-              aunque debil, y alcanza sus niveles maximos desde el inicio de la crisis en 2008.
+               El presidente de la Fundaci&oacuten &aacuterte y Mecenazgo (impulsada por 'la Caixa'),
+              Leopoldo Rod&eacutes; la directora de la Fundaci&oacuten Arte y Mecenazgo, Mercedes Basso; y la autora del informe,
+              Clare McAndrew, fundadora y directora general de Arts Econ&oacutemics, han presentado El mercado espa&ntildeol del
+              arte en 2014 en el que el sector presenta, por tercer a&ntildeo consecutivo, un crecimiento positivo del 3%,
+              aunque d&eacutebil, y alcanza sus niveles m&aacuteximos desde el inicio de la crisis en 2008.
            </p>
             <a href="http://www.elcultural.es/noticias/arte/Debil-aumento-de-las-ventas-en-el-mercado-espanol-del-arte/7061">
              <ins>
@@ -142,14 +105,7 @@
 
      <!--Fin divisón central-->
       <!--Footer-->
-      <div id="pie">
-         <div>
-            <a href="http://www.facebook.com"><img src="images/facebook.jpg" alt=""/></a>
-            <a href="http://www.twitter.com"><img src="images/twiter.jpg" alt=""/></a>
-            <a href="http://www.google.com"><img src="images/googlemas.jpg" alt=""/></a>
-         </div>
-         <p>Copyright 2014 Ventitas. Todos los derechos reservados. Desarrollado por Grupo 6</p>
-      </div>
+       <?php  include 'plantillas/footer.html';  ?>
 
   </div>
    </div>
