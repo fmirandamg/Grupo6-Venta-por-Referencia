@@ -30,7 +30,7 @@ body {
    /*font-style:  arial;*/
    font-weight: bold;
    line-height: 1;
-   color: black;
+   color: #0cc;
    margin-top: 51px;
    -moz-border-radius: 15px 15px 15px 15px;
    -webkit-border-radius: 15px 15px 15px 15px;
@@ -124,6 +124,12 @@ body {
    -webkit-border-radius: 15px 15px 15px 15px;
    border-radius: 15px 15px 15px 15px;
 }
+#maps{
+   float:right;
+   width: 50%;
+   margin-top:30px
+}
+
 
 #usuario{
      width: 75%;

@@ -62,7 +62,7 @@
             <br><br>
             <label>Email</label>
             <br>
-            <input type="email" class="nomape" name="mail" value="" maxlength="30"/>
+            <input type="email" class="nomape" name="mail" value="" maxlength="30" required/>
             <br><br>
             <label>Usuario</label>
             <br>

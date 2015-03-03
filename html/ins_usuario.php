@@ -75,11 +75,17 @@
           echo "<B> Usuario: </B>" . htmlspecialchars($usuario) . "<br><br>";
 
           echo "<B> Registro Grabado Exitosamente </B> </br></br>";
-          echo "<B> Ruta: </B>" . htmlspecialchars($rutaDestino) ."<br><br>";
-	  echo  $_FILES['foto']['name'];
+
+	/*  $fecha  = getdate();
+	  $desde  = "From:". "www.Ventitas.com";
+	  $asunto = "Ud. se ha unido a Ventas por Referencia";
+	  $mensaje= "Estimad@ ".$nombres." ".$apellidos.", nuestro sistema  procesado su registro satisfactoriamente <br> el "$fecha.". <br><br>Este mensaje ha sido enviado automáticamente, le solicitamos NO RESPONDERLO<br><br>www.Ventitas.com";
+	  
+	  mail($mail,$asunto,$mensaje,$desde);*/
+         
           ?>
           
-           <div><a href="../index.php">Volver al Inicio</a>  </br> </br> </div>
+           <div><br><br><a href="../index.php">Volver al Inicio</a>  </br> </br> </div>
       </div>
       <br><br>
       <!--Lateral derecho-->
